@@ -34,32 +34,22 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
-          className="mb-16 flex flex-col md:flex-row justify-between items-start md:items-center gap-6"
+          className="mb-16"
         >
-          <div>
-            <span className="font-mono text-xs text-zinc-500 tracking-[0.25em] uppercase block mb-3">
-              01 / BACKGROUND & PHILOSOPHY
+          <span className="font-mono text-xs text-zinc-500 tracking-[0.25em] uppercase block mb-3">
+            01 / BACKGROUND & PHILOSOPHY
+          </span>
+          <h2 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight font-serif uppercase">
+            CRAFTING RESILIENT<br />
+            <span className="bg-gradient-to-r from-white via-zinc-300 to-zinc-600 bg-clip-text text-transparent">
+              SOFTWARE SYSTEMS.
             </span>
-            <h2 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight font-serif uppercase">
-              CRAFTING RESILIENT<br />
-              <span className="bg-gradient-to-r from-white via-zinc-300 to-zinc-600 bg-clip-text text-transparent">
-                SOFTWARE SYSTEMS.
-              </span>
-            </h2>
-          </div>
-
-          <div className="shrink-0 pt-4 md:pt-0">
-            <img
-              src="/avatars/thinking.png"
-              alt="Ameya Thinking Sticker"
-              className="w-44 sm:w-56 lg:w-64 h-auto object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.9)] filter -rotate-3 hover:rotate-1 hover:scale-105 transition-all duration-300 pointer-events-none select-none"
-            />
-          </div>
+          </h2>
         </motion.div>
 
         {/* Narrative & Focus Cards Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 mb-24 items-center">
-          {/* Main Editorial Text */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 mb-20 items-center">
+          {/* Main Editorial Text & Stats */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -78,7 +68,7 @@ export default function About() {
             </p>
 
             {/* Quick Stat Pill Highlights */}
-            <div className="pt-6 grid grid-cols-2 sm:grid-cols-3 gap-4 font-mono text-xs">
+            <div className="pt-4 grid grid-cols-2 sm:grid-cols-3 gap-4 font-mono text-xs">
               <div className="border border-zinc-900 bg-zinc-950/60 p-4 rounded-lg">
                 <span className="text-zinc-500 block mb-1">DEGREE</span>
                 <span className="text-zinc-200 font-semibold">B.Tech CSE</span>
@@ -94,48 +84,56 @@ export default function About() {
             </div>
           </motion.div>
 
-          {/* Specialization Cards with Idea Sticker */}
+          {/* Right Column: Thinking Sticker */}
           <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, margin: '-100px' }}
-            className="lg:col-span-5 flex flex-col gap-4 relative"
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="lg:col-span-5 flex justify-center items-center py-4"
           >
-            {/* Prominent Idea Sticker */}
-            <div className="flex justify-center pb-2">
-              <img
-                src="/avatars/idea.png"
-                alt="Ameya Idea Sticker"
-                className="w-40 sm:w-52 lg:w-60 h-auto object-contain drop-shadow-[0_20px_35px_rgba(0,0,0,0.85)] filter rotate-2 hover:rotate-0 hover:scale-105 transition-all duration-300 pointer-events-none select-none"
-              />
-            </div>
-
-            <motion.div variants={itemVariants} className="border border-zinc-900 bg-zinc-950/40 p-6 rounded-lg hover:border-zinc-800 transition-colors">
-              <span className="font-mono text-xs text-zinc-500 block mb-2">[ 01 ] SYSTEM ARCHITECTURE</span>
-              <h3 className="text-base font-bold text-white mb-2 font-serif">Scalable Backend & APIs</h3>
-              <p className="text-xs text-zinc-400 font-light leading-relaxed">
-                Building structured REST APIs and microservice endpoints using Node.js, Express, and resilient database storage.
-              </p>
-            </motion.div>
-
-            <motion.div variants={itemVariants} className="border border-zinc-900 bg-zinc-950/40 p-6 rounded-lg hover:border-zinc-800 transition-colors">
-              <span className="font-mono text-xs text-zinc-500 block mb-2">[ 02 ] INTERFACE ENGINEERING</span>
-              <h3 className="text-base font-bold text-white mb-2 font-serif">High-Performance Web UI</h3>
-              <p className="text-xs text-zinc-400 font-light leading-relaxed">
-                Developing responsive, state-driven user interfaces in React with modern CSS architectures and Framer Motion.
-              </p>
-            </motion.div>
-
-            <motion.div variants={itemVariants} className="border border-zinc-900 bg-zinc-950/40 p-6 rounded-lg hover:border-zinc-800 transition-colors">
-              <span className="font-mono text-xs text-zinc-500 block mb-2">[ 03 ] INFRASTRUCTURE & DSA</span>
-              <h3 className="text-base font-bold text-white mb-2 font-serif">DevOps & Algorithmic Problem Solving</h3>
-              <p className="text-xs text-zinc-400 font-light leading-relaxed">
-                Applying core Data Structures & Algorithms in C++ alongside Docker containerization and cloud tooling.
-              </p>
-            </motion.div>
+            <motion.img
+              animate={{ y: [0, -6, 0] }}
+              transition={{ repeat: Infinity, duration: 4, ease: 'easeInOut' }}
+              src="/avatars/thinking.png"
+              alt="Ameya Thinking Sticker"
+              className="w-52 sm:w-64 lg:w-72 h-auto object-contain drop-shadow-[0_20px_35px_rgba(0,0,0,0.85)] filter -rotate-2 hover:rotate-1 hover:scale-105 transition-all duration-300 pointer-events-none select-none shrink-0"
+            />
           </motion.div>
         </div>
+
+        {/* Specialization Cards Grid */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-100px' }}
+          className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-24"
+        >
+          <motion.div variants={itemVariants} className="border border-zinc-900 bg-zinc-950/40 p-6 rounded-xl hover:border-zinc-800 transition-colors">
+            <span className="font-mono text-xs text-zinc-500 block mb-2">[ 01 ] SYSTEM ARCHITECTURE</span>
+            <h3 className="text-base font-bold text-white mb-2 font-serif">Scalable Backend & APIs</h3>
+            <p className="text-xs text-zinc-400 font-light leading-relaxed">
+              Building structured REST APIs and microservice endpoints using Node.js, Express, and resilient database storage.
+            </p>
+          </motion.div>
+
+          <motion.div variants={itemVariants} className="border border-zinc-900 bg-zinc-950/40 p-6 rounded-lg hover:border-zinc-800 transition-colors">
+            <span className="font-mono text-xs text-zinc-500 block mb-2">[ 02 ] INTERFACE ENGINEERING</span>
+            <h3 className="text-base font-bold text-white mb-2 font-serif">High-Performance Web UI</h3>
+            <p className="text-xs text-zinc-400 font-light leading-relaxed">
+              Developing responsive, state-driven user interfaces in React with modern CSS architectures and Framer Motion.
+            </p>
+          </motion.div>
+
+          <motion.div variants={itemVariants} className="border border-zinc-900 bg-zinc-950/40 p-6 rounded-lg hover:border-zinc-800 transition-colors">
+            <span className="font-mono text-xs text-zinc-500 block mb-2">[ 03 ] INFRASTRUCTURE & DSA</span>
+            <h3 className="text-base font-bold text-white mb-2 font-serif">DevOps & Algorithmic Problem Solving</h3>
+            <p className="text-xs text-zinc-400 font-light leading-relaxed">
+              Applying core Data Structures & Algorithms in C++ alongside Docker containerization and cloud tooling.
+            </p>
+          </motion.div>
+        </motion.div>
 
         {/* Technical Journey Timeline */}
         <motion.div
