@@ -2,9 +2,9 @@ export const PORTFOLIO_CONFIG = {
   name: "Ameya Sagwekar",
   brandName: "AMΞYA",
   fullBrandName: "AMEYA SAGWEKAR",
-  tagline: "B.Tech CSE Student & Software Developer",
+  tagline: "B.Tech Computer Science Student & Software Developer",
   headline: "Building digital systems, one idea at a time.",
-  subtext: "Computer Science & Engineering student focused on building scalable software architectures, high-performance web applications, and intuitive user interfaces.",
+  subtext: "Computer Science & Engineering student at ITM Skills University focused on building full-stack web applications, scalable software architectures, and decentralized solutions.",
   
   // Status badge settings
   status: {
@@ -12,29 +12,56 @@ export const PORTFOLIO_CONFIG = {
     active: true,
   },
   
-  // Authentic Geographic Coordinates: Mumbai, India
-  location: "MUMBAI, INDIA",
+  // Authentic Location
+  location: "MUMBAI, MAHARASHTRA",
   coordinates: "19.0760° N, 72.8777° E",
 
   // Authentic Contact & Social URLs
   social: {
     github: "https://github.com/Ameya48",
     linkedin: "https://www.linkedin.com/in/ameya-sagwekar-80081832a/",
-    email: "ameyasagwekar.work@gmail.com",
-    mailto: "mailto:ameyasagwekar.work@gmail.com",
+    email: "ameyasagwekar@gmail.com",
+    mailto: "mailto:ameyasagwekar@gmail.com",
   },
 
   // Central Resume Configuration
   resume: {
     url: "/resume.pdf",
     filename: "Ameya_Sagwekar_Resume.pdf",
-    summary: "B.Tech CSE Student & Full Stack Software Developer with expertise in React, Node.js, Express, MongoDB, C++ Data Structures & Algorithms, and Docker.",
+    summary: "B.Tech CSE Student at ITM Skills University with frontend and operations internship experience. Proficient in React.js, Node.js, Express.js, MongoDB, C++ Data Structures & Algorithms, and Blockchain technologies.",
     education: {
-      degree: "Bachelor of Technology in Computer Science & Engineering",
-      year: "2023 - 2027 (Expected)",
-      location: "Mumbai, India",
+      degree: "Bachelor of Technology in Computer Science and Engineering",
+      institution: "ITM Skills University",
+      year: "2024 – 2028",
+      location: "Navi Mumbai, Maharashtra",
     },
   },
+
+  // Work Experience
+  experience: [
+    {
+      role: "Frontend Developer Intern",
+      company: "Hari Om Thalassic Pvt. Ltd.",
+      location: "Mumbai, Maharashtra",
+      period: "Jul. 2025 – Oct. 2025",
+      highlights: [
+        "Worked on frontend development tasks and contributed to software development activities across frontend and backend technologies.",
+        "Collaborated with supervisors and team members to implement development tasks and support project requirements.",
+        "Applied problem-solving and development skills while working within deadlines and contributing to project objectives."
+      ]
+    },
+    {
+      role: "Operations Intern",
+      company: "LetsUpgrade Edtech Pvt. Ltd.",
+      location: "Navi Mumbai, Maharashtra",
+      period: "Jan. 2026 – Apr. 2026",
+      highlights: [
+        "Worked as an Operations Intern, supporting day-to-day operational activities and coordination within the organization.",
+        "Collaborated with team members and contributed to assigned tasks while maintaining deadlines and organizational requirements.",
+        "Gained practical exposure to professional workflows, communication, coordination, and workplace operations."
+      ]
+    }
+  ],
 
   // Navigation Links
   navLinks: [
@@ -48,83 +75,91 @@ export const PORTFOLIO_CONFIG = {
   // Technical Journey Timeline for About section
   timeline: [
     {
-      year: "2023",
-      title: "Core Foundations & Algorithmic Problem Solving",
-      description: "Mastered Data Structures & Algorithms in C++. Built strong logic foundations and computer science fundamentals."
+      year: "2024 – 2028",
+      title: "B.Tech in Computer Science & Engineering",
+      description: "Enrolled at ITM Skills University, Navi Mumbai. Focusing on Data Structures & Algorithms, Full-Stack Architecture, DBMS, and Distributed Systems."
     },
     {
-      year: "2024",
-      title: "Full-Stack Web Systems & APIs",
-      description: "Expanded into modern JavaScript/TypeScript, React, Node.js, and Express to build production-ready web apps and RESTful services."
+      year: "JUL 2025 – OCT 2025",
+      title: "Frontend Developer Intern @ Hari Om Thalassic Pvt. Ltd.",
+      description: "Engineered frontend web components, integrated REST APIs, and collaborated across frontend and backend tech stacks within project deadlines."
     },
     {
-      year: "2025 - PRESENT",
-      title: "Cloud Infrastructure, Databases & Scalable Engineering",
-      description: "Working with Docker, AWS, PostgreSQL, MongoDB, and CI/CD pipelines to engineer end-to-end resilient software solutions."
+      year: "JAN 2026 – APR 2026",
+      title: "Operations Intern @ LetsUpgrade Edtech Pvt. Ltd.",
+      description: "Coordinated operational workflows, cross-department communication, task tracking, and professional ed-tech operations."
     }
   ],
 
-  // Skills Ecosystem Data
+  // Skills Ecosystem Data (matching exact Resume categories)
   skillCategories: [
+    {
+      id: "languages",
+      title: "LANGUAGES",
+      description: "Core programming languages for application development and systems logic.",
+      skills: [
+        { name: "C++", description: "Object-oriented programming, memory management, and competitive data structures." },
+        { name: "JavaScript", description: "ES6+ async/await, closures, DOM manipulation, and functional patterns." },
+        { name: "Python", description: "Scripting, algorithm prototyping, and backend data processing." },
+        { name: "SQL", description: "Relational database queries, schema design, joins, and data normalization." },
+        { name: "HTML", description: "Semantic document structure, accessibility standards, and web fundamentals." },
+        { name: "CSS", description: "Modern styling, flexbox/grid layouts, dynamic animations, and responsive design." }
+      ]
+    },
     {
       id: "frontend",
       title: "FRONTEND",
       description: "Crafting fluid, high-performance visual interfaces.",
       skills: [
-        { name: "React", description: "Component-driven UI, state management, and custom hooks architecture." },
-        { name: "JavaScript", description: "ES6+ async programming, DOM performance, and closure patterns." },
-        { name: "HTML5", description: "Semantic markup, accessibility (a11y), and document structure." },
-        { name: "CSS3 / Tailwind", description: "Custom design systems, responsive layouts, and keyframe animations." }
+        { name: "React.js", description: "Component architecture, hooks state management, and SPA client rendering." },
+        { name: "HTML5", description: "Semantic markup and modern browser API integrations." },
+        { name: "CSS3", description: "Custom layouts, keyframe animations, and design system tokens." },
+        { name: "JavaScript", description: "Client-side interactive logic and async fetch API communications." }
       ]
     },
     {
       id: "backend",
       title: "BACKEND",
-      description: "Architecting async web servers and modular APIs.",
+      description: "Architecting web servers and RESTful microservices.",
       skills: [
-        { name: "Node.js", description: "Non-blocking event loop execution and server-side JavaScript execution." },
-        { name: "Express.js", description: "RESTful API routes, middleware stacks, and authentication flows." }
+        { name: "Node.js", description: "Non-blocking event loop execution and server-side JavaScript runtime." },
+        { name: "Express.js", description: "RESTful route handlers, middleware pipelines, and API security." },
+        { name: "REST APIs", description: "Designing HTTP endpoints, JSON response payloads, and status codes." }
       ]
     },
     {
       id: "databases",
       title: "DATABASES",
-      description: "Managing structured and document-oriented storage.",
+      description: "Structured and NoSQL database management systems.",
       skills: [
-        { name: "MongoDB", description: "NoSQL document schemas, aggregation pipelines, and indexing." },
-        { name: "PostgreSQL", description: "Relational data modeling, SQL queries, and transaction integrity." },
-        { name: "Firebase", description: "Real-time client state sync, authentication, and cloud functions." },
-        { name: "Firestore", description: "Flexible, scalable NoSQL cloud database for client-heavy apps." }
+        { name: "MongoDB", description: "NoSQL document collections, aggregation framework, and Mongoose ORM." },
+        { name: "Firebase", description: "Real-time client synchronization, authentication, and cloud hosting." },
+        { name: "Firestore", description: "Scalable cloud NoSQL database for client-heavy real-time apps." },
+        { name: "PostgreSQL", description: "Relational tables, foreign key constraints, and SQL data integrity." }
       ]
     },
     {
       id: "tools",
-      title: "DEVELOPMENT / TOOLS",
-      description: "Version control and containerized environments.",
+      title: "TOOLS & TECHNOLOGIES",
+      description: "Developer tooling, cloud, and containerized runtime.",
       skills: [
-        { name: "Git", description: "Branching strategies, commit history management, and rebase workflows." },
-        { name: "GitHub", description: "Code review, pull requests, automated actions, and open-source hosting." },
-        { name: "Docker", description: "Containerizing applications for consistent cross-environment runtime." },
-        { name: "REST APIs", description: "Designing intuitive HTTP endpoints, JSON schemas, and status handling." }
+        { name: "Git", description: "Version control branching, commit tagging, and merge strategies." },
+        { name: "GitHub", description: "Source code repository hosting, collaboration, and pull requests." },
+        { name: "Docker", description: "Containerizing applications for consistent execution environments." },
+        { name: "AWS", description: "Cloud infrastructure deployment, S3 storage, and EC2 computing." },
+        { name: "MongoDB Compass", description: "GUI tool for database schema inspection and document querying." }
       ]
     },
     {
-      id: "cloud",
-      title: "CLOUD / DEVOPS",
-      description: "Deploying and orchestrating cloud infra.",
+      id: "concepts",
+      title: "CONCEPTS",
+      description: "Computer science theory and software engineering principles.",
       skills: [
-        { name: "AWS", description: "EC2 instances, S3 bucket storage, and IAM security policies." },
-        { name: "Kubernetes", description: "Container orchestration, pod scaling, and deployment manifests." },
-        { name: "Jenkins", description: "Automated continuous integration and build pipelines." }
-      ]
-    },
-    {
-      id: "cs",
-      title: "LANGUAGES / CS",
-      description: "Core algorithms and low-level execution logic.",
-      skills: [
-        { name: "C++", description: "Object-oriented programming, memory management, and competitive code execution." },
-        { name: "Data Structures & Algorithms", description: "Trees, graphs, dynamic programming, and optimal space/time complexity." }
+        { name: "Data Structures & Algorithms", description: "Trees, graphs, dynamic programming, sorting, and time/space complexity optimization." },
+        { name: "OOP", description: "Object-oriented paradigm, encapsulation, inheritance, and polymorphism." },
+        { name: "DBMS", description: "Database management system architecture, ACID properties, and indexing." },
+        { name: "Blockchain", description: "Decentralized ledgers, smart contracts, permissioned networks, and IPFS storage." },
+        { name: "Cloud Computing", description: "Scalable cloud architecture, serverless infrastructure, and cloud deployment." }
       ]
     }
   ],
@@ -132,17 +167,17 @@ export const PORTFOLIO_CONFIG = {
   // Flagship Featured Project Case Study
   featuredProject: {
     id: "budget-optimization-engine",
-    title: "Smart Budget Optimization Engine",
-    subtitle: "Algorithmic Income Allocation & Expense Minimization System",
-    problemStatement: "Individuals struggle to balance fixed monthly expenses with variable spending, leading to inefficient capital allocation and missed investment opportunities.",
-    solution: "An intelligent web application that processes user income and categorized expenses, applies Knapsack and Greedy optimization algorithms, and generates optimal spending allocations alongside investment recommendations.",
-    technologies: ["React", "JavaScript", "MongoDB", "Firebase", "Node.js", "Express.js"],
-    algorithms: ["Greedy Optimization", "0/1 Knapsack Problem", "Priority Queues", "Dynamic Programming"],
+    title: "Budget Optimization Engine",
+    subtitle: "Personal Finance Platform with Algorithmic Fund Allocation",
+    problemStatement: "Individuals struggle to balance fixed monthly expenses with discretionary spending, leading to inefficient fund allocation and missed investment opportunities.",
+    solution: "A personal finance platform that analyzes user salary, fixed expenses, entertainment spending, and available savings using Greedy and 0/1 Knapsack optimization algorithms to recommend efficient fund allocations and personalized financial reports.",
+    technologies: ["MongoDB", "Firebase", "JavaScript", "DSA"],
+    algorithms: ["Greedy Optimization", "0/1 Knapsack Problem", "Dynamic Programming", "Priority Allocation"],
     keyFeatures: [
-      "Real-time expense ingestion & algorithmic budget partitioning",
-      "Priority Queue evaluation for essential vs. discretionary spending",
-      "Greedy allocation for maximizing surplus for high-yield investments",
-      "NoSQL persistence with MongoDB & real-time client state with Firebase"
+      "Real-time income ingestion & expense breakdown analysis",
+      "0/1 Knapsack algorithmic allocation for essential fixed expense optimization",
+      "Greedy strategy to maximize surplus directed to high-yield investment options",
+      "Personalized financial reports with investment suggestions & stock-market allocation options"
     ],
     codeSnippet: `// 0/1 Knapsack Optimization for Essential Budget Allocation
 function optimizeBudget(capacity, expenses) {
@@ -164,146 +199,87 @@ function optimizeBudget(capacity, expenses) {
     githubUrl: "https://github.com/Ameya48",
     demoUrl: null,
     caseStudyDetails: {
-      problem: "Traditional budgeting spreadsheets require manual calculations and fail to recommend mathematically optimal spending distributions. Users frequently overspend in non-essential categories before allocating funds toward savings or investments.",
-      approach: "Formulated budget optimization as a constrained optimization problem. Expenses are categorized by priority and flexibility. We implemented a hybrid Greedy and Knapsack algorithm to systematically satisfy fixed commitments, prune unnecessary discretionary items, and direct surplus into tiered investment buckets.",
-      implementation: "Built a responsive React frontend paired with a modular Express/Node.js backend. MongoDB is utilized for user account persistence, while Firebase handles real-time updates. The optimization core uses custom JavaScript implementations of Priority Queues and Dynamic Programming tables.",
-      challenges: "Handling edge cases where non-discretionary expenses exceed total monthly income without crashing the optimization loop, and ensuring algorithmic calculations complete in under 50ms on the client side.",
-      outcome: "Successfully engineered a fast, deterministic budgeting system capable of calculating optimal financial allocations in under 30ms with zero manual spreadsheet formulas."
+      problem: "Traditional budgeting spreadsheets require manual calculations and fail to recommend mathematically optimal spending distributions based on spending priority and savings goals.",
+      approach: "Formulated budget optimization using constrained optimization. Expenses are prioritized by necessity. A hybrid Greedy and Knapsack algorithm satisfies fixed commitments, reduces non-essential spending, and channels surplus into tailored investment suggestions.",
+      implementation: "Built using JavaScript and Data Structures & Algorithms, integrated with MongoDB for user persistence and Firebase for real-time state management. Features include automated expense partitioning and stock-market investment options.",
+      challenges: "Handling cases where non-discretionary expenses approach total income without compromising optimization speed, ensuring algorithmic computation runs in under 30ms.",
+      outcome: "Successfully engineered a deterministic finance engine that computes optimal budget partitioning and personalized financial reports in real time."
     }
   },
 
-  // Curated Projects List
+  // Curated Projects List (matching exact Resume projects)
   curatedProjects: [
+    {
+      id: "loyalty-rewards-program",
+      name: "Loyalty Rewards Program",
+      category: "FULL STACK",
+      description: "Full-stack loyalty rewards application with React frontend and Node.js/Express.js backend, featuring MongoDB data storage, JWT authentication, and REST APIs.",
+      technologies: ["React", "Node.js", "Express.js", "MongoDB", "JWT"],
+      githubUrl: "https://github.com/Ameya48",
+      demoUrl: null
+    },
     {
       id: "ayurvedic-supply-chain",
       name: "Ayurvedic Herbal Supply Chain",
       category: "BLOCKCHAIN",
-      description: "A decentralized tracking system for authenticating botanical ingredient origin, harvest verification, and supply chain transparency.",
-      technologies: ["Solidity", "React", "Ethereum", "Node.js", "Web3.js"],
-      githubUrl: "https://github.com/Ameya48",
-      demoUrl: null
-    },
-    {
-      id: "mern-loyalty-rewards",
-      name: "MERN Loyalty Rewards Program",
-      category: "FULL STACK",
-      description: "Full-stack customer engagement platform featuring real-time tier calculation, digital reward points redemption, and admin telemetry.",
-      technologies: ["MongoDB", "Express.js", "React", "Node.js", "JWT"],
-      githubUrl: "https://github.com/Ameya48",
-      demoUrl: null
-    },
-    {
-      id: "itm-development-tracker",
-      name: "ITM Personal Development Tracker",
-      category: "WEB",
-      description: "Student goal tracking system for monitoring academic milestones, skill progression logs, and weekly project deliverables.",
-      technologies: ["React", "JavaScript", "Tailwind CSS", "Firebase"],
-      githubUrl: "https://github.com/Ameya48",
-      demoUrl: null
-    },
-    {
-      id: "emotirate",
-      name: "EmotiRate Sentiment Analyzer",
-      category: "FULL STACK",
-      description: "Feedback sentiment rating platform analyzing customer reviews and text input to output real-time emotional satisfaction scores.",
-      technologies: ["Node.js", "Express", "React", "REST APIs", "Tailwind"],
-      githubUrl: "https://github.com/Ameya48",
-      demoUrl: null
-    },
-    {
-      id: "kuku-fm-clone",
-      name: "Kuku FM Audio Platform",
-      category: "WEB",
-      description: "Audio streaming web application inspired by Kuku FM, featuring custom media player controls, playlist management, and clean dark UI.",
-      technologies: ["React", "JavaScript", "HTML5 Audio", "CSS3"],
-      githubUrl: "https://github.com/Ameya48",
-      demoUrl: null
-    },
-    {
-      id: "desi-tadka-restaurant",
-      name: "Desi Tadka Restaurant",
-      category: "WEB",
-      description: "Modern, responsive restaurant menu showcase and table reservation system with dynamic filterable cuisine categories.",
-      technologies: ["React", "JavaScript", "CSS Modules", "Responsive Design"],
-      githubUrl: "https://github.com/Ameya48",
-      demoUrl: null
-    },
-    {
-      id: "wanderlust-explorer",
-      name: "Wanderlust Travel Explorer",
-      category: "FULL STACK",
-      description: "Travel destination discovery web app featuring interactive location previews, review management, and user bookmarking.",
-      technologies: ["Node.js", "Express", "MongoDB", "EJS / React"],
+      description: "Blockchain-based solution for improving traceability and transparency in the Ayurvedic herbal supply chain using Hyperledger Fabric and IPFS decentralized document storage.",
+      technologies: ["Hyperledger Fabric", "IPFS", "Blockchain", "Geo-tagging"],
       githubUrl: "https://github.com/Ameya48",
       demoUrl: null
     }
   ],
 
-  // Achievements & Milestones Data
+  // Certifications & Achievements (matching exact Resume achievements)
   achievements: [
     {
-      id: "hackathon-2026",
-      category: "HACKATHONS",
-      year: "2026",
-      title: "Student Portfolio Hackathon 2026 Participant",
-      organization: "Hackathon Organizer",
-      description: "Designed and built an Awwwards-level developer portfolio showcasing full-stack capabilities, case studies, and engineering philosophy.",
-      credentialUrl: null,
-      isPlaceholder: false
-    },
-    {
-      id: "academic-degree",
-      category: "ACADEMIC",
-      year: "2023 - PRESENT",
-      title: "B.Tech in Computer Science & Engineering",
-      organization: "University / Institution",
-      description: "Pursuing Bachelor of Technology degree in Computer Science, focusing on Software Engineering, Core Algorithms, Database Management, and Web Technologies.",
-      credentialUrl: null,
-      isPlaceholder: false
-    },
-    {
-      id: "cert-placeholder-1",
+      id: "bnb-chain-cert",
       category: "CERTIFICATIONS",
-      year: "2025",
-      title: "Full-Stack Development & Cloud Specialization",
-      organization: "Professional Certification Track",
-      description: "Verified coursework and hands-on capstone projects in full-stack architecture, REST APIs, and database engineering.",
+      year: "2026",
+      title: "BNB Chain Appreciation Certificate",
+      organization: "BNB Hack Mumbai",
+      description: "Received an appreciation certificate for participating in BNB Hack Mumbai.",
       credentialUrl: null,
       isPlaceholder: false
     },
     {
-      id: "workshop-1",
-      category: "WORKSHOPS",
-      year: "2024",
-      title: "Full-Stack & Systems Architecture Seminars",
-      organization: "Tech Workshops",
-      description: "Participated in specialized technical sessions focusing on REST API architecture, React state management, and modern deployment practices.",
+      id: "hari-om-internship",
+      category: "EXPERIENCE",
+      year: "2025",
+      title: "Frontend Developer Internship Completion",
+      organization: "Hari Om Thalassic Pvt. Ltd.",
+      description: "Successfully completed an internship as a Frontend Developer Intern from July 2025 to October 2025 in Mumbai, Maharashtra.",
+      credentialUrl: null,
+      isPlaceholder: false
+    },
+    {
+      id: "letsupgrade-internship",
+      category: "EXPERIENCE",
+      year: "2026",
+      title: "Operations Internship Offer & Role",
+      organization: "LetsUpgrade Edtech Pvt. Ltd.",
+      description: "Selected for an Operations Internship at LetsUpgrade Edtech Pvt. Ltd. from January 2026 to April 2026 in Navi Mumbai, Maharashtra.",
       credentialUrl: null,
       isPlaceholder: false
     }
   ],
 
-  // Currently Exploring Focus
+  // Currently Exploring Focus (matching Resume Interests)
   currentlyExploring: [
     {
-      title: "Full Stack Architecture",
-      description: "Designing modular REST microservices and async data pipelines using Node.js & Express."
+      title: "Full-Stack Web Development",
+      description: "Building scalable web apps using React.js, Node.js, Express.js, and MongoDB."
     },
     {
-      title: "Cloud & AWS Infrastructure",
-      description: "Exploring EC2 instance setup, S3 bucket storage management, and IAM cloud security policies."
+      title: "Cloud Computing & AWS",
+      description: "Deploying cloud infrastructure with AWS services, S3 storage, and Docker containerization."
     },
     {
-      title: "DevOps & Containerization",
-      description: "Learning Docker container builds and Kubernetes pod orchestration for consistent runtime environments."
+      title: "Data Structures & Algorithms",
+      description: "Practicing low-level logic, optimization problems, and dynamic programming in C++."
     },
     {
-      title: "Advanced Data Structures & Algorithms",
-      description: "Consistently practicing competitive problem solving in C++ focusing on Graphs, Trees, and Dynamic Programming."
-    },
-    {
-      title: "Modern Web Performance",
-      description: "Refining high-speed rendering techniques with React 19, Tailwind CSS v4, and minimal client payload bundles."
+      title: "Blockchain Technologies",
+      description: "Exploring Hyperledger Fabric, IPFS decentralized storage, and Web3 traceability solutions."
     }
   ]
 }

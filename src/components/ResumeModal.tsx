@@ -78,13 +78,38 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
                 [ EDUCATION ]
               </h3>
               <div className="p-4 bg-zinc-950 rounded-lg border border-zinc-900">
-                <div className="flex justify-between items-center font-semibold text-white mb-1">
+                <div className="flex justify-between items-center font-semibold text-white mb-1 flex-wrap gap-2">
                   <span>{PORTFOLIO_CONFIG.resume.education.degree}</span>
                   <span className="font-mono text-xs text-zinc-400">{PORTFOLIO_CONFIG.resume.education.year}</span>
                 </div>
                 <p className="text-xs text-zinc-400 font-mono uppercase">
-                  {PORTFOLIO_CONFIG.resume.education.location}
+                  {PORTFOLIO_CONFIG.resume.education.institution} • {PORTFOLIO_CONFIG.resume.education.location}
                 </p>
+              </div>
+            </div>
+
+            {/* Work Experience */}
+            <div>
+              <h3 className="font-mono text-xs text-zinc-500 uppercase tracking-widest mb-2 font-bold">
+                [ WORK EXPERIENCE ]
+              </h3>
+              <div className="space-y-3">
+                {PORTFOLIO_CONFIG.experience.map((exp, idx) => (
+                  <div key={idx} className="p-4 bg-zinc-950 rounded-lg border border-zinc-900">
+                    <div className="flex flex-wrap justify-between items-start mb-1 gap-1">
+                      <div>
+                        <span className="font-semibold text-white block">{exp.role}</span>
+                        <span className="text-xs text-zinc-400 font-mono uppercase">{exp.company} • {exp.location}</span>
+                      </div>
+                      <span className="font-mono text-xs text-zinc-400">{exp.period}</span>
+                    </div>
+                    <ul className="list-disc list-inside text-xs text-zinc-400 font-light space-y-1 pt-1">
+                      {exp.highlights.map((item, i) => (
+                        <li key={i}>{item}</li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
               </div>
             </div>
 
@@ -95,8 +120,12 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
               </h3>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 font-mono text-xs">
                 <div className="p-3 bg-zinc-950 rounded border border-zinc-900">
+                  <span className="text-zinc-500 block text-[10px]">LANGUAGES</span>
+                  <span className="text-white">C++, JavaScript, Python, SQL, HTML, CSS</span>
+                </div>
+                <div className="p-3 bg-zinc-950 rounded border border-zinc-900">
                   <span className="text-zinc-500 block text-[10px]">FRONTEND</span>
-                  <span className="text-white">React, JS, HTML5, CSS3/Tailwind</span>
+                  <span className="text-white">React.js, HTML5, CSS3, JavaScript</span>
                 </div>
                 <div className="p-3 bg-zinc-950 rounded border border-zinc-900">
                   <span className="text-zinc-500 block text-[10px]">BACKEND</span>
@@ -104,15 +133,15 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
                 </div>
                 <div className="p-3 bg-zinc-950 rounded border border-zinc-900">
                   <span className="text-zinc-500 block text-[10px]">DATABASES</span>
-                  <span className="text-white">MongoDB, PostgreSQL, Firebase</span>
+                  <span className="text-white">MongoDB, Firebase, Firestore, PostgreSQL</span>
                 </div>
                 <div className="p-3 bg-zinc-950 rounded border border-zinc-900">
-                  <span className="text-zinc-500 block text-[10px]">INFRASTRUCTURE</span>
-                  <span className="text-white">Docker, AWS, Git, GitHub</span>
+                  <span className="text-zinc-500 block text-[10px]">TOOLS</span>
+                  <span className="text-white">Git, GitHub, Docker, AWS, MongoDB Compass</span>
                 </div>
-                <div className="p-3 bg-zinc-950 rounded border border-zinc-900 col-span-2 sm:col-span-2">
-                  <span className="text-zinc-500 block text-[10px]">LANGUAGES & DSA</span>
-                  <span className="text-white">C++, JavaScript, Data Structures & Algorithms</span>
+                <div className="p-3 bg-zinc-950 rounded border border-zinc-900">
+                  <span className="text-zinc-500 block text-[10px]">CONCEPTS</span>
+                  <span className="text-white">DSA, OOP, DBMS, Blockchain, Cloud</span>
                 </div>
               </div>
             </div>

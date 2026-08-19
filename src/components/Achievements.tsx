@@ -5,7 +5,7 @@ import { PORTFOLIO_CONFIG } from '../config/portfolio'
 export default function Achievements() {
   const [activeCategory, setActiveCategory] = useState<string>('ALL')
 
-  const categories = ['ALL', 'HACKATHONS', 'ACADEMIC', 'CERTIFICATIONS', 'WORKSHOPS']
+  const categories = ['ALL', 'CERTIFICATIONS', 'EXPERIENCE']
 
   const filteredAchievements = PORTFOLIO_CONFIG.achievements.filter((item) => {
     if (activeCategory === 'ALL') return true
