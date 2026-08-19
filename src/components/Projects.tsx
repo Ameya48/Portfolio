@@ -52,11 +52,7 @@ export default function Projects() {
             {/* Top Flagship Header Tag */}
             <div className="flex flex-wrap justify-between items-center pb-6 mb-8 border-b border-zinc-900 gap-4">
               <div className="flex items-center space-x-3">
-                <img
-                  src="/avatars/explaining.png"
-                  alt="Ameya Explaining Sticker"
-                  className="w-12 h-12 object-contain drop-shadow-[0_8px_16px_rgba(0,0,0,0.8)] filter -rotate-3 hover:rotate-0 hover:scale-110 transition-all duration-300 pointer-events-none select-none"
-                />
+                <span className="w-2.5 h-2.5 rounded-full bg-white animate-pulse" />
                 <div>
                   <span className="font-mono text-xs text-zinc-300 font-semibold tracking-widest uppercase block">
                     FLAGSHIP CASE STUDY
@@ -154,9 +150,17 @@ export default function Projects() {
                 </div>
               </div>
 
-              {/* Right Abstract Visual Dashboard Preview with Code Toggle */}
-              <div className="lg:col-span-5 border border-zinc-800/80 rounded-xl bg-zinc-950 p-6 space-y-5 font-mono text-xs relative overflow-hidden">
-                <div className="flex justify-between items-center pb-3 border-b border-zinc-900 text-zinc-500 text-[10px] tracking-widest">
+              {/* Right Visual Dashboard Preview & Explaining Sticker */}
+              <div className="lg:col-span-5 flex flex-col space-y-6 items-center">
+                {/* Prominent Explaining Sticker */}
+                <img
+                  src="/avatars/explaining.png"
+                  alt="Ameya Explaining Sticker"
+                  className="w-40 sm:w-52 lg:w-60 h-auto object-contain drop-shadow-[0_20px_35px_rgba(0,0,0,0.85)] filter -rotate-3 hover:rotate-0 hover:scale-105 transition-all duration-300 pointer-events-none select-none"
+                />
+
+                <div className="w-full border border-zinc-800/80 rounded-xl bg-zinc-950 p-6 space-y-5 font-mono text-xs relative overflow-hidden">
+                  <div className="flex justify-between items-center pb-3 border-b border-zinc-900 text-zinc-500 text-[10px] tracking-widest">
                   <div className="flex space-x-2">
                     <button
                       onClick={() => setPreviewTab('metrics')}
@@ -217,7 +221,8 @@ export default function Projects() {
                 )}
               </div>
             </div>
-          </TiltCard>
+          </div>
+        </TiltCard>
         </motion.div>
 
         {/* CURATED OTHER PROJECTS SECTION */}

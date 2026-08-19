@@ -73,7 +73,7 @@ export default function Hero() {
             {/* Primary Identity Headline */}
             <motion.h1
               variants={itemVariants}
-              className="text-4xl sm:text-6xl md:text-8xl lg:text-[7rem] font-extrabold tracking-tighter text-white leading-[0.9] mb-8 font-serif uppercase"
+              className="text-4xl sm:text-6xl md:text-7xl lg:text-[5.5rem] xl:text-[6.2rem] font-extrabold tracking-tighter text-white leading-[0.9] mb-8 font-serif uppercase"
             >
               AMEYA<br />
               <span className="bg-gradient-to-r from-white via-zinc-200 to-zinc-500 bg-clip-text text-transparent">
@@ -172,13 +172,13 @@ export default function Hero() {
           </div>
 
           {/* Right Hero Avatar Sticker */}
-          <motion.div variants={itemVariants} className="lg:col-span-4 hidden lg:flex justify-center items-center">
+          <motion.div variants={itemVariants} className="lg:col-span-4 hidden lg:flex justify-end items-end pt-12 lg:translate-x-6 xl:translate-x-10 lg:translate-y-10 xl:translate-y-14">
             <motion.img
               animate={{ y: [0, -8, 0] }}
               transition={{ repeat: Infinity, duration: 4, ease: 'easeInOut' }}
               src="/avatars/working.png"
               alt="Ameya Working Sticker"
-              className="w-64 md:w-72 h-auto object-contain drop-shadow-[0_20px_35px_rgba(0,0,0,0.85)] filter -rotate-2 hover:rotate-1 hover:scale-105 transition-all duration-300 pointer-events-none select-none"
+              className="w-56 md:w-64 lg:w-72 h-auto object-contain drop-shadow-[0_20px_35px_rgba(0,0,0,0.85)] filter -rotate-2 hover:rotate-1 hover:scale-105 transition-all duration-300 pointer-events-none select-none shrink-0"
             />
           </motion.div>
         </div>

@@ -35,11 +35,11 @@ export default function Achievements() {
             </h2>
           </div>
 
-          <div className="shrink-0 hidden md:block">
+          <div className="shrink-0 pt-4 md:pt-0">
             <img
               src="/avatars/achievement.png"
               alt="Ameya Achievement Sticker"
-              className="w-28 h-auto object-contain drop-shadow-[0_15px_25px_rgba(0,0,0,0.85)] filter -rotate-3 hover:rotate-0 hover:scale-110 transition-all duration-300 pointer-events-none select-none"
+              className="w-36 sm:w-48 lg:w-56 h-auto object-contain drop-shadow-[0_20px_35px_rgba(0,0,0,0.9)] filter -rotate-3 hover:rotate-0 hover:scale-105 transition-all duration-300 pointer-events-none select-none"
             />
           </div>
         </motion.div>
@@ -127,7 +127,7 @@ export default function Achievements() {
           transition={{ duration: 0.8 }}
           className="pt-12 border-t border-zinc-900/80"
         >
-          <div className="mb-8 flex items-center justify-between">
+          <div className="mb-8 flex items-center justify-between gap-4">
             <div>
               <span className="font-mono text-xs text-zinc-500 tracking-[0.2em] uppercase block mb-2">
                 ACTIVE GROWTH & RESEARCH
@@ -139,7 +139,7 @@ export default function Achievements() {
             <img
               src="/avatars/learning.png"
               alt="Ameya Learning Sticker"
-              className="w-20 h-auto object-contain drop-shadow-[0_10px_20px_rgba(0,0,0,0.8)] filter rotate-2 hover:rotate-0 hover:scale-110 transition-all duration-300 pointer-events-none select-none shrink-0 hidden sm:block"
+              className="w-32 sm:w-44 lg:w-52 h-auto object-contain drop-shadow-[0_20px_35px_rgba(0,0,0,0.85)] filter rotate-2 hover:rotate-0 hover:scale-105 transition-all duration-300 pointer-events-none select-none shrink-0"
             />
           </div>
 

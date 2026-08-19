@@ -48,17 +48,17 @@ export default function About() {
             </h2>
           </div>
 
-          <div className="shrink-0 hidden md:block">
+          <div className="shrink-0 pt-4 md:pt-0">
             <img
               src="/avatars/thinking.png"
               alt="Ameya Thinking Sticker"
-              className="w-32 sm:w-36 h-auto object-contain drop-shadow-[0_15px_30px_rgba(0,0,0,0.85)] filter -rotate-3 hover:rotate-0 hover:scale-110 transition-all duration-300 pointer-events-none select-none"
+              className="w-44 sm:w-56 lg:w-64 h-auto object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.9)] filter -rotate-3 hover:rotate-1 hover:scale-105 transition-all duration-300 pointer-events-none select-none"
             />
           </div>
         </motion.div>
 
         {/* Narrative & Focus Cards Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 mb-24">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 mb-24 items-center">
           {/* Main Editorial Text */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -94,14 +94,22 @@ export default function About() {
             </div>
           </motion.div>
 
-          {/* Specialization Cards */}
+          {/* Specialization Cards with Idea Sticker */}
           <motion.div
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: '-100px' }}
-            className="lg:col-span-5 flex flex-col gap-4"
+            className="lg:col-span-5 flex flex-col gap-4 relative"
           >
+            {/* Prominent Idea Sticker */}
+            <div className="flex justify-center pb-2">
+              <img
+                src="/avatars/idea.png"
+                alt="Ameya Idea Sticker"
+                className="w-40 sm:w-52 lg:w-60 h-auto object-contain drop-shadow-[0_20px_35px_rgba(0,0,0,0.85)] filter rotate-2 hover:rotate-0 hover:scale-105 transition-all duration-300 pointer-events-none select-none"
+              />
+            </div>
 
             <motion.div variants={itemVariants} className="border border-zinc-900 bg-zinc-950/40 p-6 rounded-lg hover:border-zinc-800 transition-colors">
               <span className="font-mono text-xs text-zinc-500 block mb-2">[ 01 ] SYSTEM ARCHITECTURE</span>

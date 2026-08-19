@@ -71,13 +71,8 @@ export default function Navbar({ onOpenCommandPalette, onOpenResume }: NavbarPro
           {/* Left Brand Logo */}
           <a
             href="#"
-            className="flex items-center space-x-2.5 group text-white font-serif font-bold text-lg md:text-xl tracking-tight"
+            className="flex items-center space-x-3 group text-white font-serif font-bold text-lg md:text-xl tracking-tight"
           >
-            <img
-              src="/avatars/working.png"
-              alt="Ameya Sticker Logo"
-              className="w-8 h-8 object-contain drop-shadow-md group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 pointer-events-none select-none"
-            />
             <span className="bg-gradient-to-r from-white via-zinc-200 to-zinc-400 bg-clip-text text-transparent group-hover:text-glow transition-all">
               {PORTFOLIO_CONFIG.brandName}
             </span>

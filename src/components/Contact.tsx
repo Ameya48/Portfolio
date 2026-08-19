@@ -47,20 +47,30 @@ export default function Contact({ onOpenResume }: ContactProps) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
-          className="mb-16"
+          className="mb-16 flex flex-col md:flex-row justify-between items-start md:items-center gap-6"
         >
-          <span className="font-mono text-xs text-zinc-500 tracking-[0.25em] uppercase block mb-3">
-            05 / RECRUITER & CONNECT
-          </span>
-          <h2 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight font-serif uppercase leading-none mb-4">
-            HAVE AN IDEA?<br />
-            <span className="bg-gradient-to-r from-white via-zinc-300 to-zinc-600 bg-clip-text text-transparent">
-              LET'S BUILD SOMETHING.
+          <div>
+            <span className="font-mono text-xs text-zinc-500 tracking-[0.25em] uppercase block mb-3">
+              05 / RECRUITER & CONNECT
             </span>
-          </h2>
-          <p className="text-sm sm:text-base text-zinc-400 font-light max-w-xl leading-relaxed">
-            Open for software engineering opportunities, internships, and technical projects. Feel free to connect directly or download my resume.
-          </p>
+            <h2 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight font-serif uppercase leading-none mb-4">
+              HAVE AN IDEA?<br />
+              <span className="bg-gradient-to-r from-white via-zinc-300 to-zinc-600 bg-clip-text text-transparent">
+                LET'S BUILD SOMETHING.
+              </span>
+            </h2>
+            <p className="text-sm sm:text-base text-zinc-400 font-light max-w-xl leading-relaxed">
+              Open for software engineering opportunities, internships, and technical projects. Feel free to connect directly or download my resume.
+            </p>
+          </div>
+
+          <div className="shrink-0 pt-4 md:pt-0">
+            <img
+              src="/avatars/coffee-break.png"
+              alt="Ameya Coffee Break Sticker"
+              className="w-40 sm:w-52 lg:w-60 h-auto object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.9)] filter rotate-3 hover:rotate-0 hover:scale-105 transition-all duration-300 pointer-events-none select-none"
+            />
+          </div>
         </motion.div>
 
         {/* Primary Recruiter Action Cards: Resume, LinkedIn, GitHub */}
@@ -154,23 +164,16 @@ export default function Contact({ onOpenResume }: ContactProps) {
         {/* Contact Form Section */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
           <div className="lg:col-span-5 space-y-6">
-            <div className="border border-zinc-800/80 bg-zinc-950/60 p-6 rounded-xl space-y-4 font-mono text-xs">
-              <div className="flex items-center space-x-4">
-                <img
-                  src="/avatars/coffee-break.png"
-                  alt="Ameya Coffee Break Sticker"
-                  className="w-20 h-auto object-contain drop-shadow-[0_10px_20px_rgba(0,0,0,0.85)] filter rotate-3 hover:rotate-0 hover:scale-110 transition-all duration-300 pointer-events-none select-none shrink-0"
-                />
-                <div>
-                  <span className="text-zinc-500 uppercase tracking-widest block text-[10px]">
-                    LET'S CHAT OVER COFFEE
-                  </span>
-                  <span className="text-sm font-serif font-bold text-white block">
-                    Direct & Open Line
-                  </span>
-                </div>
+            <div className="border border-zinc-800/80 bg-zinc-950/60 p-6 rounded-xl space-y-3 font-mono text-xs">
+              <div>
+                <span className="text-zinc-500 uppercase tracking-widest block text-[10px]">
+                  LET'S CONNECT
+                </span>
+                <span className="text-sm font-serif font-bold text-white block">
+                  Direct & Open Line
+                </span>
               </div>
-              <div className="pt-2 border-t border-zinc-900">
+              <div className="pt-3 border-t border-zinc-900">
                 <span className="text-zinc-500 uppercase tracking-widest block text-[10px] mb-1">
                   DIRECT EMAIL:
                 </span>
