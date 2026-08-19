@@ -84,29 +84,25 @@ export default function About() {
             </div>
           </motion.div>
 
-          {/* Specialization & Workspace Editorial Showcase */}
+          {/* Specialization Cards with Avatar Showcase */}
           <motion.div
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: '-100px' }}
-            className="lg:col-span-5 space-y-6"
+            className="lg:col-span-5 flex flex-col gap-4"
           >
-            {/* Workspace Photography Card */}
-            <motion.div
-              variants={itemVariants}
-              className="relative overflow-hidden rounded-xl border border-zinc-800/80 bg-zinc-950/60 shadow-xl group"
-            >
+            {/* Thinking Avatar Showcase Card */}
+            <motion.div variants={itemVariants} className="border border-zinc-800/80 bg-zinc-950/60 p-5 rounded-xl flex items-center space-x-4 hover:border-zinc-700 transition-all">
               <img
-                src="/images/about/workspace.jpg"
-                alt="Creative Professional Workspace"
-                loading="lazy"
-                className="w-full h-56 sm:h-64 object-cover filter brightness-95 contrast-105 group-hover:scale-[1.02] transition-transform duration-700 ease-out"
+                src="/avatars/thinking.png"
+                alt="Ameya Thinking Avatar"
+                className="w-24 h-24 object-contain rounded-lg bg-zinc-900/80 p-2 border border-zinc-800 shrink-0"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/20 to-transparent opacity-80" />
-              <div className="absolute bottom-3 left-4 right-4 flex justify-between items-center font-mono text-[10px] text-zinc-400">
-                <span>CREATIVE WORKSPACE</span>
-                <span>MUMBAI STUDIO</span>
+              <div>
+                <span className="font-mono text-[10px] text-zinc-500 uppercase tracking-widest block mb-1">ENGINEERING MINDSET</span>
+                <h4 className="text-sm font-bold text-white font-serif">Algorithmic Problem Solving</h4>
+                <p className="text-xs text-zinc-400 font-light mt-1">Analyzing complex challenges and translating concepts into optimized systems.</p>
               </div>
             </motion.div>
 
@@ -123,6 +119,14 @@ export default function About() {
               <h3 className="text-base font-bold text-white mb-2 font-serif">High-Performance Web UI</h3>
               <p className="text-xs text-zinc-400 font-light leading-relaxed">
                 Developing responsive, state-driven user interfaces in React with modern CSS architectures and Framer Motion.
+              </p>
+            </motion.div>
+
+            <motion.div variants={itemVariants} className="border border-zinc-900 bg-zinc-950/40 p-6 rounded-lg hover:border-zinc-800 transition-colors">
+              <span className="font-mono text-xs text-zinc-500 block mb-2">[ 03 ] INFRASTRUCTURE & DSA</span>
+              <h3 className="text-base font-bold text-white mb-2 font-serif">DevOps & Algorithmic Problem Solving</h3>
+              <p className="text-xs text-zinc-400 font-light leading-relaxed">
+                Applying core Data Structures & Algorithms in C++ alongside Docker containerization and cloud tooling.
               </p>
             </motion.div>
           </motion.div>

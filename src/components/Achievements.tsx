@@ -21,17 +21,27 @@ export default function Achievements() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
-          className="mb-12"
+          className="mb-12 flex flex-col md:flex-row justify-between items-start md:items-center gap-6"
         >
-          <span className="font-mono text-xs text-zinc-500 tracking-[0.25em] uppercase block mb-3">
-            04 / MILESTONES & JOURNEY
-          </span>
-          <h2 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight font-serif uppercase">
-            ACHIEVEMENTS &<br />
-            <span className="bg-gradient-to-r from-white via-zinc-300 to-zinc-600 bg-clip-text text-transparent">
-              PROFESSIONAL PROGRESSION.
+          <div>
+            <span className="font-mono text-xs text-zinc-500 tracking-[0.25em] uppercase block mb-3">
+              04 / MILESTONES & JOURNEY
             </span>
-          </h2>
+            <h2 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight font-serif uppercase">
+              ACHIEVEMENTS &<br />
+              <span className="bg-gradient-to-r from-white via-zinc-300 to-zinc-600 bg-clip-text text-transparent">
+                PROFESSIONAL PROGRESSION.
+              </span>
+            </h2>
+          </div>
+
+          <div className="shrink-0 hidden md:block">
+            <img
+              src="/avatars/achievement.png"
+              alt="Ameya Achievement Avatar"
+              className="w-24 h-24 object-contain rounded-xl bg-zinc-950/80 p-2 border border-zinc-800 shadow-xl"
+            />
+          </div>
         </motion.div>
 
         {/* Filter Tabs */}
@@ -117,13 +127,20 @@ export default function Achievements() {
           transition={{ duration: 0.8 }}
           className="pt-12 border-t border-zinc-900/80"
         >
-          <div className="mb-8">
-            <span className="font-mono text-xs text-zinc-500 tracking-[0.2em] uppercase block mb-2">
-              ACTIVE GROWTH & RESEARCH
-            </span>
-            <h3 className="text-2xl sm:text-3xl font-serif font-bold text-white uppercase">
-              CURRENTLY EXPLORING
-            </h3>
+          <div className="mb-8 flex items-center justify-between">
+            <div>
+              <span className="font-mono text-xs text-zinc-500 tracking-[0.2em] uppercase block mb-2">
+                ACTIVE GROWTH & RESEARCH
+              </span>
+              <h3 className="text-2xl sm:text-3xl font-serif font-bold text-white uppercase">
+                CURRENTLY EXPLORING
+              </h3>
+            </div>
+            <img
+              src="/avatars/learning.png"
+              alt="Ameya Learning Avatar"
+              className="w-16 h-16 object-contain rounded-lg bg-zinc-950 p-1.5 border border-zinc-800 shrink-0 hidden sm:block"
+            />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

@@ -154,18 +154,35 @@ export default function Contact({ onOpenResume }: ContactProps) {
         {/* Contact Form Section */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
           <div className="lg:col-span-5 space-y-6">
-            <div className="border border-zinc-900 bg-zinc-950/60 p-6 rounded-xl space-y-2 font-mono text-xs">
-              <span className="text-zinc-500 uppercase tracking-widest block">
-                DIRECT INQUIRY EMAIL
-              </span>
-              <a
-                href={PORTFOLIO_CONFIG.social.mailto}
-                className="text-base sm:text-lg font-serif text-white hover:text-zinc-300 transition-colors font-bold block"
-              >
-                {PORTFOLIO_CONFIG.social.email}
-              </a>
-              <p className="text-[11px] text-zinc-500 font-light pt-2">
-                Submitting the contact form will format a direct email message addressed to ameyasagwekar.work@gmail.com.
+            <div className="border border-zinc-800/80 bg-zinc-950/60 p-6 rounded-xl space-y-4 font-mono text-xs">
+              <div className="flex items-center space-x-4">
+                <img
+                  src="/avatars/coffee-break.png"
+                  alt="Ameya Coffee Break Avatar"
+                  className="w-16 h-16 object-contain rounded-lg bg-zinc-900/80 p-1.5 border border-zinc-800 shrink-0"
+                />
+                <div>
+                  <span className="text-zinc-500 uppercase tracking-widest block text-[10px]">
+                    LET'S CHAT OVER COFFEE
+                  </span>
+                  <span className="text-sm font-serif font-bold text-white block">
+                    Direct & Open Line
+                  </span>
+                </div>
+              </div>
+              <div className="pt-2 border-t border-zinc-900">
+                <span className="text-zinc-500 uppercase tracking-widest block text-[10px] mb-1">
+                  DIRECT EMAIL:
+                </span>
+                <a
+                  href={PORTFOLIO_CONFIG.social.mailto}
+                  className="text-base sm:text-lg font-serif text-white hover:text-zinc-300 transition-colors font-bold block"
+                >
+                  {PORTFOLIO_CONFIG.social.email}
+                </a>
+              </div>
+              <p className="text-[11px] text-zinc-500 font-light">
+                Submitting the inquiry form will format a direct email addressed to ameyasagwekar@gmail.com.
               </p>
             </div>
           </div>

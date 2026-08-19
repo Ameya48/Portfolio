@@ -69,40 +69,50 @@ export default function Skills() {
         </div>
 
         {/* Dynamic Skill Details Inspector Panel */}
-        <div className="mb-12 p-6 sm:p-8 rounded-xl border border-zinc-800/80 bg-gradient-to-r from-zinc-950 via-[#0a0a0c] to-zinc-950 relative overflow-hidden">
-          <div className="absolute top-0 right-0 p-6 font-mono text-[10px] text-zinc-600 uppercase tracking-widest pointer-events-none hidden sm:block">
-            INSPECTOR // HOVER A TECH NODE
+        <div className="mb-12 p-6 sm:p-8 rounded-xl border border-zinc-800/80 bg-gradient-to-r from-zinc-950 via-[#0a0a0c] to-zinc-950 relative overflow-hidden flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+          <div className="flex-1 space-y-2">
+            <div className="font-mono text-[10px] text-zinc-500 uppercase tracking-widest block mb-2">
+              INSPECTOR // HOVER A TECH NODE
+            </div>
+
+            <AnimatePresence mode="wait">
+              {hoveredSkill ? (
+                <motion.div
+                  key={hoveredSkill.name}
+                  initial={{ opacity: 0, y: 6 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -6 }}
+                  transition={{ duration: 0.2 }}
+                  className="space-y-2"
+                >
+                  <div className="flex items-center space-x-3">
+                    <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
+                    <span className="font-mono text-xs text-zinc-400 tracking-widest uppercase font-semibold">
+                      {hoveredSkill.category}
+                    </span>
+                  </div>
+                  <h3 className="text-2xl sm:text-3xl font-serif font-bold text-white tracking-tight">
+                    {hoveredSkill.name}
+                  </h3>
+                  <p className="text-sm text-zinc-400 font-light max-w-2xl leading-relaxed">
+                    {hoveredSkill.description}
+                  </p>
+                </motion.div>
+              ) : (
+                <div className="py-2 text-zinc-600 font-mono text-xs">
+                  HOVER OVER OR TAP ANY TECHNOLOGY BELOW TO INSPECT ARCHITECTURAL DETAILS.
+                </div>
+              )}
+            </AnimatePresence>
           </div>
 
-          <AnimatePresence mode="wait">
-            {hoveredSkill ? (
-              <motion.div
-                key={hoveredSkill.name}
-                initial={{ opacity: 0, y: 6 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -6 }}
-                transition={{ duration: 0.2 }}
-                className="space-y-2"
-              >
-                <div className="flex items-center space-x-3">
-                  <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
-                  <span className="font-mono text-xs text-zinc-400 tracking-widest uppercase font-semibold">
-                    {hoveredSkill.category}
-                  </span>
-                </div>
-                <h3 className="text-2xl sm:text-3xl font-serif font-bold text-white tracking-tight">
-                  {hoveredSkill.name}
-                </h3>
-                <p className="text-sm text-zinc-400 font-light max-w-3xl leading-relaxed">
-                  {hoveredSkill.description}
-                </p>
-              </motion.div>
-            ) : (
-              <div className="py-2 text-zinc-600 font-mono text-xs">
-                HOVER OVER OR TAP ANY TECHNOLOGY BELOW TO INSPECT ARCHITECTURAL DETAILS.
-              </div>
-            )}
-          </AnimatePresence>
+          <div className="shrink-0 hidden md:block border-l border-zinc-900 pl-6">
+            <img
+              src="/avatars/coding.png"
+              alt="Ameya Coding Avatar"
+              className="w-28 h-28 object-contain rounded-lg bg-zinc-950/80 p-2 border border-zinc-800/80 shadow-lg"
+            />
+          </div>
         </div>
 
         {/* Layered Constellation Grid */}
