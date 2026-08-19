@@ -9,7 +9,7 @@ export default function Projects() {
   const [previewTab, setPreviewTab] = useState<'metrics' | 'code'>('metrics')
 
   const featured = PORTFOLIO_CONFIG.featuredProject
-  const categories = ['ALL', 'FULL STACK', 'BLOCKCHAIN']
+  const categories = ['ALL', 'FULL STACK', 'WEB', 'BLOCKCHAIN', 'SYSTEMS']
 
   const filteredProjects = PORTFOLIO_CONFIG.curatedProjects.filter((project) => {
     if (selectedCategory === 'ALL') return true

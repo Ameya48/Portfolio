@@ -196,7 +196,7 @@ function optimizeBudget(capacity, expenses) {
   }
   return dp[n][capacity];
 }`,
-    githubUrl: "https://github.com/Ameya48",
+    githubUrl: "https://github.com/Ameya48/Personal_BudgetOptimizationEngine",
     demoUrl: null,
     caseStudyDetails: {
       problem: "Traditional budgeting spreadsheets require manual calculations and fail to recommend mathematically optimal spending distributions based on spending priority and savings goals.",
@@ -207,15 +207,42 @@ function optimizeBudget(capacity, expenses) {
     }
   },
 
-  // Curated Projects List (matching exact Resume projects)
+  // Curated Projects List (including pinned GitHub repositories)
   curatedProjects: [
     {
       id: "loyalty-rewards-program",
       name: "Loyalty Rewards Program",
       category: "FULL STACK",
-      description: "Full-stack loyalty rewards application with React frontend and Node.js/Express.js backend, featuring MongoDB data storage, JWT authentication, and REST APIs.",
+      description: "Full-stack customer engagement & loyalty rewards application built with React, Node.js, Express.js, MongoDB, JWT authentication, and REST APIs.",
       technologies: ["React", "Node.js", "Express.js", "MongoDB", "JWT"],
-      githubUrl: "https://github.com/Ameya48",
+      githubUrl: "https://github.com/Ameya48/LoyaltyRewards",
+      demoUrl: null
+    },
+    {
+      id: "retailverse-ecommerce",
+      name: "RetailVerse E-Commerce Platform",
+      category: "FULL STACK",
+      description: "Modern retail management and e-commerce storefront platform featuring dynamic product catalogs, cart workflows, order processing, and admin telemetry.",
+      technologies: ["JavaScript", "Node.js", "Express", "MongoDB", "REST APIs"],
+      githubUrl: "https://github.com/Ameya48/RetailVerse",
+      demoUrl: null
+    },
+    {
+      id: "kukufm-audio-platform",
+      name: "Kuku FM Audio Streaming Platform",
+      category: "WEB",
+      description: "Web-based audio streaming platform inspired by Kuku FM, featuring custom media player controls, playlist management, audio telemetry, and sleek dark UI.",
+      technologies: ["React", "JavaScript", "HTML5 Audio", "CSS3"],
+      githubUrl: "https://github.com/Ameya48/KukuFM_Project",
+      demoUrl: null
+    },
+    {
+      id: "data-warehouse-system",
+      name: "Data Warehouse Management System",
+      category: "SYSTEMS",
+      description: "Enterprise data warehouse processing platform for analyzing large-scale datasets, relational DBMS modeling, ETL pipelines, and analytical SQL reporting.",
+      technologies: ["Python", "SQL", "DBMS", "ETL Pipelines"],
+      githubUrl: "https://github.com/Ameya48/DataWarehouseSystem",
       demoUrl: null
     },
     {
@@ -225,6 +252,15 @@ function optimizeBudget(capacity, expenses) {
       description: "Blockchain-based solution for improving traceability and transparency in the Ayurvedic herbal supply chain using Hyperledger Fabric and IPFS decentralized document storage.",
       technologies: ["Hyperledger Fabric", "IPFS", "Blockchain", "Geo-tagging"],
       githubUrl: "https://github.com/Ameya48",
+      demoUrl: null
+    },
+    {
+      id: "awwwards-portfolio",
+      name: "Developer Portfolio System",
+      category: "WEB",
+      description: "High-performance developer portfolio built with React 19, TypeScript, Tailwind CSS, Framer Motion, and embedded PDF resume inspector.",
+      technologies: ["TypeScript", "React", "Tailwind CSS", "Vite"],
+      githubUrl: "https://github.com/Ameya48/Portfolio",
       demoUrl: null
     }
   ],
