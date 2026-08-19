@@ -75,8 +75,8 @@ export default function Navbar({ onOpenCommandPalette, onOpenResume }: NavbarPro
           >
             <img
               src="/avatars/working.png"
-              alt="Ameya Avatar Logo"
-              className="w-7 h-7 object-contain rounded-full bg-zinc-900 border border-zinc-800 p-0.5 group-hover:scale-110 transition-transform"
+              alt="Ameya Sticker Logo"
+              className="w-8 h-8 object-contain drop-shadow-md group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 pointer-events-none select-none"
             />
             <span className="bg-gradient-to-r from-white via-zinc-200 to-zinc-400 bg-clip-text text-transparent group-hover:text-glow transition-all">
               {PORTFOLIO_CONFIG.brandName}

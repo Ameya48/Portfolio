@@ -54,8 +54,8 @@ export default function Projects() {
               <div className="flex items-center space-x-3">
                 <img
                   src="/avatars/explaining.png"
-                  alt="Ameya Explaining Avatar"
-                  className="w-10 h-10 object-contain rounded-full bg-zinc-900 border border-zinc-800 p-1"
+                  alt="Ameya Explaining Sticker"
+                  className="w-12 h-12 object-contain drop-shadow-[0_8px_16px_rgba(0,0,0,0.8)] filter -rotate-3 hover:rotate-0 hover:scale-110 transition-all duration-300 pointer-events-none select-none"
                 />
                 <div>
                   <span className="font-mono text-xs text-zinc-300 font-semibold tracking-widest uppercase block">

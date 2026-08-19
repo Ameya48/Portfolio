@@ -106,11 +106,11 @@ export default function Skills() {
             </AnimatePresence>
           </div>
 
-          <div className="shrink-0 hidden md:block border-l border-zinc-900 pl-6">
+          <div className="shrink-0 hidden md:block pl-4">
             <img
               src="/avatars/coding.png"
-              alt="Ameya Coding Avatar"
-              className="w-28 h-28 object-contain rounded-lg bg-zinc-950/80 p-2 border border-zinc-800/80 shadow-lg"
+              alt="Ameya Coding Sticker"
+              className="w-28 h-auto object-contain drop-shadow-[0_15px_25px_rgba(0,0,0,0.85)] filter rotate-3 hover:rotate-0 hover:scale-110 transition-all duration-300 pointer-events-none select-none"
             />
           </div>
         </div>

@@ -158,8 +158,8 @@ export default function Contact({ onOpenResume }: ContactProps) {
               <div className="flex items-center space-x-4">
                 <img
                   src="/avatars/coffee-break.png"
-                  alt="Ameya Coffee Break Avatar"
-                  className="w-16 h-16 object-contain rounded-lg bg-zinc-900/80 p-1.5 border border-zinc-800 shrink-0"
+                  alt="Ameya Coffee Break Sticker"
+                  className="w-20 h-auto object-contain drop-shadow-[0_10px_20px_rgba(0,0,0,0.85)] filter rotate-3 hover:rotate-0 hover:scale-110 transition-all duration-300 pointer-events-none select-none shrink-0"
                 />
                 <div>
                   <span className="text-zinc-500 uppercase tracking-widest block text-[10px]">

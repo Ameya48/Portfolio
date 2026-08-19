@@ -171,21 +171,15 @@ export default function Hero() {
             </motion.div>
           </div>
 
-          {/* Right Hero Avatar Highlight */}
+          {/* Right Hero Avatar Sticker */}
           <motion.div variants={itemVariants} className="lg:col-span-4 hidden lg:flex justify-center items-center">
-            <div className="relative group">
-              <div className="absolute -inset-1 rounded-2xl bg-gradient-to-tr from-zinc-700 via-zinc-400 to-zinc-800 opacity-20 group-hover:opacity-40 blur-xl transition duration-500" />
-              <div className="relative border border-zinc-800/90 bg-zinc-950/80 p-5 rounded-2xl backdrop-blur-md max-w-xs shadow-2xl text-center">
-                <img
-                  src="/avatars/working.png"
-                  alt="Ameya Working Illustration"
-                  className="w-full h-auto max-h-72 object-contain mx-auto group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="pt-3 border-t border-zinc-900 mt-3 font-mono text-[10px] text-zinc-400 uppercase tracking-widest">
-                  SOFTWARE ENGINEER // AMEYA
-                </div>
-              </div>
-            </div>
+            <motion.img
+              animate={{ y: [0, -8, 0] }}
+              transition={{ repeat: Infinity, duration: 4, ease: 'easeInOut' }}
+              src="/avatars/working.png"
+              alt="Ameya Working Sticker"
+              className="w-64 md:w-72 h-auto object-contain drop-shadow-[0_20px_35px_rgba(0,0,0,0.85)] filter -rotate-2 hover:rotate-1 hover:scale-105 transition-all duration-300 pointer-events-none select-none"
+            />
           </motion.div>
         </div>
       </motion.div>

@@ -38,8 +38,8 @@ export default function Achievements() {
           <div className="shrink-0 hidden md:block">
             <img
               src="/avatars/achievement.png"
-              alt="Ameya Achievement Avatar"
-              className="w-24 h-24 object-contain rounded-xl bg-zinc-950/80 p-2 border border-zinc-800 shadow-xl"
+              alt="Ameya Achievement Sticker"
+              className="w-28 h-auto object-contain drop-shadow-[0_15px_25px_rgba(0,0,0,0.85)] filter -rotate-3 hover:rotate-0 hover:scale-110 transition-all duration-300 pointer-events-none select-none"
             />
           </div>
         </motion.div>
@@ -138,8 +138,8 @@ export default function Achievements() {
             </div>
             <img
               src="/avatars/learning.png"
-              alt="Ameya Learning Avatar"
-              className="w-16 h-16 object-contain rounded-lg bg-zinc-950 p-1.5 border border-zinc-800 shrink-0 hidden sm:block"
+              alt="Ameya Learning Sticker"
+              className="w-20 h-auto object-contain drop-shadow-[0_10px_20px_rgba(0,0,0,0.8)] filter rotate-2 hover:rotate-0 hover:scale-110 transition-all duration-300 pointer-events-none select-none shrink-0 hidden sm:block"
             />
           </div>
 

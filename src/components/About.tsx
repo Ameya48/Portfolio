@@ -34,17 +34,27 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
-          className="mb-16"
+          className="mb-16 flex flex-col md:flex-row justify-between items-start md:items-center gap-6"
         >
-          <span className="font-mono text-xs text-zinc-500 tracking-[0.25em] uppercase block mb-3">
-            01 / BACKGROUND & PHILOSOPHY
-          </span>
-          <h2 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight font-serif uppercase">
-            CRAFTING RESILIENT<br />
-            <span className="bg-gradient-to-r from-white via-zinc-300 to-zinc-600 bg-clip-text text-transparent">
-              SOFTWARE SYSTEMS.
+          <div>
+            <span className="font-mono text-xs text-zinc-500 tracking-[0.25em] uppercase block mb-3">
+              01 / BACKGROUND & PHILOSOPHY
             </span>
-          </h2>
+            <h2 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight font-serif uppercase">
+              CRAFTING RESILIENT<br />
+              <span className="bg-gradient-to-r from-white via-zinc-300 to-zinc-600 bg-clip-text text-transparent">
+                SOFTWARE SYSTEMS.
+              </span>
+            </h2>
+          </div>
+
+          <div className="shrink-0 hidden md:block">
+            <img
+              src="/avatars/thinking.png"
+              alt="Ameya Thinking Sticker"
+              className="w-32 sm:w-36 h-auto object-contain drop-shadow-[0_15px_30px_rgba(0,0,0,0.85)] filter -rotate-3 hover:rotate-0 hover:scale-110 transition-all duration-300 pointer-events-none select-none"
+            />
+          </div>
         </motion.div>
 
         {/* Narrative & Focus Cards Grid */}
@@ -84,7 +94,7 @@ export default function About() {
             </div>
           </motion.div>
 
-          {/* Specialization Cards with Avatar Showcase */}
+          {/* Specialization Cards */}
           <motion.div
             variants={containerVariants}
             initial="hidden"
@@ -92,19 +102,6 @@ export default function About() {
             viewport={{ once: true, margin: '-100px' }}
             className="lg:col-span-5 flex flex-col gap-4"
           >
-            {/* Thinking Avatar Showcase Card */}
-            <motion.div variants={itemVariants} className="border border-zinc-800/80 bg-zinc-950/60 p-5 rounded-xl flex items-center space-x-4 hover:border-zinc-700 transition-all">
-              <img
-                src="/avatars/thinking.png"
-                alt="Ameya Thinking Avatar"
-                className="w-24 h-24 object-contain rounded-lg bg-zinc-900/80 p-2 border border-zinc-800 shrink-0"
-              />
-              <div>
-                <span className="font-mono text-[10px] text-zinc-500 uppercase tracking-widest block mb-1">ENGINEERING MINDSET</span>
-                <h4 className="text-sm font-bold text-white font-serif">Algorithmic Problem Solving</h4>
-                <p className="text-xs text-zinc-400 font-light mt-1">Analyzing complex challenges and translating concepts into optimized systems.</p>
-              </div>
-            </motion.div>
 
             <motion.div variants={itemVariants} className="border border-zinc-900 bg-zinc-950/40 p-6 rounded-lg hover:border-zinc-800 transition-colors">
               <span className="font-mono text-xs text-zinc-500 block mb-2">[ 01 ] SYSTEM ARCHITECTURE</span>
