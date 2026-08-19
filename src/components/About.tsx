@@ -84,14 +84,32 @@ export default function About() {
             </div>
           </motion.div>
 
-          {/* Specialization Cards */}
+          {/* Specialization & Workspace Editorial Showcase */}
           <motion.div
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: '-100px' }}
-            className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4"
+            className="lg:col-span-5 space-y-6"
           >
+            {/* Workspace Photography Card */}
+            <motion.div
+              variants={itemVariants}
+              className="relative overflow-hidden rounded-xl border border-zinc-800/80 bg-zinc-950/60 shadow-xl group"
+            >
+              <img
+                src="/images/about/workspace.jpg"
+                alt="Creative Professional Workspace"
+                loading="lazy"
+                className="w-full h-56 sm:h-64 object-cover filter brightness-95 contrast-105 group-hover:scale-[1.02] transition-transform duration-700 ease-out"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/20 to-transparent opacity-80" />
+              <div className="absolute bottom-3 left-4 right-4 flex justify-between items-center font-mono text-[10px] text-zinc-400">
+                <span>CREATIVE WORKSPACE</span>
+                <span>MUMBAI STUDIO</span>
+              </div>
+            </motion.div>
+
             <motion.div variants={itemVariants} className="border border-zinc-900 bg-zinc-950/40 p-6 rounded-lg hover:border-zinc-800 transition-colors">
               <span className="font-mono text-xs text-zinc-500 block mb-2">[ 01 ] SYSTEM ARCHITECTURE</span>
               <h3 className="text-base font-bold text-white mb-2 font-serif">Scalable Backend & APIs</h3>
@@ -105,14 +123,6 @@ export default function About() {
               <h3 className="text-base font-bold text-white mb-2 font-serif">High-Performance Web UI</h3>
               <p className="text-xs text-zinc-400 font-light leading-relaxed">
                 Developing responsive, state-driven user interfaces in React with modern CSS architectures and Framer Motion.
-              </p>
-            </motion.div>
-
-            <motion.div variants={itemVariants} className="border border-zinc-900 bg-zinc-950/40 p-6 rounded-lg hover:border-zinc-800 transition-colors">
-              <span className="font-mono text-xs text-zinc-500 block mb-2">[ 03 ] INFRASTRUCTURE & DSA</span>
-              <h3 className="text-base font-bold text-white mb-2 font-serif">DevOps & Algorithmic Problem Solving</h3>
-              <p className="text-xs text-zinc-400 font-light leading-relaxed">
-                Applying core Data Structures & Algorithms in C++ alongside Docker containerization and cloud tooling.
               </p>
             </motion.div>
           </motion.div>

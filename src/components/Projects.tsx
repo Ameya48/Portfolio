@@ -6,7 +6,6 @@ import TiltCard from './TiltCard'
 export default function Projects() {
   const [selectedCategory, setSelectedCategory] = useState<string>('ALL')
   const [isCaseStudyOpen, setIsCaseStudyOpen] = useState<boolean>(false)
-  const [previewTab, setPreviewTab] = useState<'metrics' | 'code'>('metrics')
 
   const featured = PORTFOLIO_CONFIG.featuredProject
   const categories = ['ALL', 'FULL STACK', 'BLOCKCHAIN']
@@ -145,67 +144,32 @@ export default function Projects() {
                 </div>
               </div>
 
-              {/* Right Abstract Visual Dashboard Preview with Code Toggle */}
-              <div className="lg:col-span-5 border border-zinc-800/80 rounded-xl bg-zinc-950 p-6 space-y-5 font-mono text-xs relative overflow-hidden">
-                <div className="flex justify-between items-center pb-3 border-b border-zinc-900 text-zinc-500 text-[10px] tracking-widest">
-                  <div className="flex space-x-2">
-                    <button
-                      onClick={() => setPreviewTab('metrics')}
-                      className={`px-2 py-0.5 rounded transition-colors ${
-                        previewTab === 'metrics' ? 'bg-white text-black font-bold' : 'text-zinc-500 hover:text-zinc-300'
-                      }`}
-                    >
-                      METRICS
-                    </button>
-                    <button
-                      onClick={() => setPreviewTab('code')}
-                      className={`px-2 py-0.5 rounded transition-colors ${
-                        previewTab === 'code' ? 'bg-white text-black font-bold' : 'text-zinc-500 hover:text-zinc-300'
-                      }`}
-                    >
-                      CODE CORE
-                    </button>
+              {/* Right Editorial Product Visual Showcase */}
+              <div className="lg:col-span-5 space-y-4">
+                <div className="relative overflow-hidden rounded-xl border border-zinc-800/80 bg-zinc-950 shadow-2xl group">
+                  <img
+                    src={featured.image}
+                    alt={featured.title}
+                    loading="lazy"
+                    className="w-full h-56 sm:h-64 object-cover filter brightness-95 contrast-105 group-hover:scale-[1.02] transition-transform duration-700 ease-out"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent opacity-60" />
+                  <div className="absolute bottom-3 left-4 right-4 flex justify-between items-center font-mono text-[10px] text-zinc-400">
+                    <span>FINANCIAL PLANNING SUITE</span>
+                    <span>EDITORIAL PREVIEW</span>
                   </div>
-                  <span>LATENCY: &lt; 30MS</span>
                 </div>
 
-                {previewTab === 'metrics' ? (
-                  <div className="space-y-3">
-                    <div className="flex justify-between text-zinc-400">
-                      <span>MONTHLY INCOME</span>
-                      <span className="text-white">$5,400.00</span>
-                    </div>
-                    <div className="w-full bg-zinc-900 h-1.5 rounded-full overflow-hidden">
-                      <div className="bg-zinc-400 h-full w-[85%]" />
-                    </div>
-
-                    <div className="flex justify-between text-zinc-400">
-                      <span>FIXED COMMITMENTS (KNAPSACK)</span>
-                      <span className="text-zinc-300">$2,100.00</span>
-                    </div>
-                    <div className="w-full bg-zinc-900 h-1.5 rounded-full overflow-hidden">
-                      <div className="bg-emerald-500 h-full w-[38%]" />
-                    </div>
-
-                    <div className="flex justify-between text-zinc-400">
-                      <span>GREEDY SURPLUS ALLOCATION</span>
-                      <span className="text-white font-semibold">$1,850.00</span>
-                    </div>
-                    <div className="w-full bg-zinc-900 h-1.5 rounded-full overflow-hidden">
-                      <div className="bg-white h-full w-[65%]" />
-                    </div>
-
-                    <div className="pt-3 border-t border-zinc-900 text-[11px] space-y-1 text-zinc-500">
-                      <p><span className="text-emerald-400">✓</span> PriorityQueue.sort(essential_weights)</p>
-                      <p><span className="text-emerald-400">✓</span> Knapsack.optimize(capacity, surplus)</p>
-                      <p className="text-zinc-400">→ Investment yield target: +14.2% annualized</p>
-                    </div>
+                {/* Code / Algorithmic Snippet Container */}
+                <div className="border border-zinc-800/80 rounded-xl bg-zinc-950 p-4 font-mono text-xs">
+                  <div className="flex justify-between items-center pb-2 mb-2 border-b border-zinc-900 text-[10px] text-zinc-500 tracking-widest">
+                    <span>ALGORITHMIC CORE // 0/1 KNAPSACK</span>
+                    <span>LATENCY: &lt; 30MS</span>
                   </div>
-                ) : (
-                  <div className="overflow-x-auto p-3 bg-[#050507] rounded border border-zinc-900 text-[11px] text-zinc-300 font-mono leading-relaxed">
+                  <div className="overflow-x-auto text-[11px] text-zinc-400 font-mono leading-relaxed">
                     <pre>{featured.codeSnippet}</pre>
                   </div>
-                )}
+                </div>
               </div>
             </div>
           </TiltCard>
@@ -253,24 +217,36 @@ export default function Projects() {
                   exit={{ opacity: 0, scale: 0.95 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <TiltCard className="border border-zinc-900/90 bg-zinc-950/40 p-6 rounded-xl flex flex-col justify-between hover:border-zinc-800 transition-all duration-300 group h-full">
+                  <TiltCard className="border border-zinc-900/90 bg-zinc-950/40 rounded-xl overflow-hidden flex flex-col justify-between hover:border-zinc-800 transition-all duration-300 group h-full">
                     <div>
-                      <div className="flex justify-between items-center mb-3">
-                        <span className="font-mono text-[10px] px-2.5 py-0.5 rounded bg-zinc-900 text-zinc-400 uppercase border border-zinc-800">
-                          {project.category}
-                        </span>
+                      {/* Project Editorial Thumbnail */}
+                      {'image' in project && (
+                        <div className="relative h-44 overflow-hidden border-b border-zinc-900 bg-zinc-950">
+                          <img
+                            src={(project as any).image}
+                            alt={project.name}
+                            loading="lazy"
+                            className="w-full h-full object-cover filter brightness-90 contrast-105 group-hover:scale-[1.03] transition-transform duration-500 ease-out"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent opacity-70" />
+                          <span className="absolute top-3 left-3 font-mono text-[10px] px-2.5 py-0.5 rounded bg-zinc-950/80 text-zinc-300 uppercase border border-zinc-800 backdrop-blur-sm">
+                            {project.category}
+                          </span>
+                        </div>
+                      )}
+
+                      <div className="p-6">
+                        <h4 className="text-lg font-serif font-bold text-white group-hover:text-zinc-200 transition-colors mb-2">
+                          {project.name}
+                        </h4>
+
+                        <p className="text-xs text-zinc-400 font-light leading-relaxed mb-4">
+                          {project.description}
+                        </p>
                       </div>
-
-                      <h4 className="text-lg font-serif font-bold text-white group-hover:text-zinc-200 transition-colors mb-2">
-                        {project.name}
-                      </h4>
-
-                      <p className="text-xs text-zinc-400 font-light leading-relaxed mb-6">
-                        {project.description}
-                      </p>
                     </div>
 
-                    <div>
+                    <div className="p-6 pt-0">
                       {/* Tech Badges */}
                       <div className="flex flex-wrap gap-1.5 mb-6">
                         {project.technologies.map((t) => (

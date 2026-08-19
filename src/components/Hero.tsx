@@ -28,6 +28,18 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-[92svh] flex flex-col justify-between px-6 py-10 md:px-16 md:py-16 overflow-hidden">
+      {/* Background Editorial Sculptural Visual */}
+      <div className="absolute top-0 right-0 w-full lg:w-1/2 h-full pointer-events-none z-0 opacity-40 lg:opacity-60 overflow-hidden">
+        <img
+          src="/images/hero/hero-visual.jpg"
+          alt="Abstract 3D Sculpture"
+          className="w-full h-full object-cover object-right mix-blend-lighten filter brightness-90 contrast-105"
+        />
+        {/* Soft Gradient Overlay for Seamless Editorial Blend */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#030303] via-[#030303]/80 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#030303] via-transparent to-[#030303]/60" />
+      </div>
+
       {/* Top Status & Context Bar */}
       <motion.div
         initial={{ opacity: 0, y: -10 }}
