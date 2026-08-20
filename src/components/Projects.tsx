@@ -151,78 +151,78 @@ export default function Projects() {
               </div>
 
               {/* Right Visual Dashboard Preview & Explaining Avatar ("Teacher at Blackboard") */}
-              <div className="lg:col-span-7 flex flex-col sm:flex-row items-center gap-3 sm:gap-4 relative pt-4 lg:pt-0">
-                {/* Teacher Avatar standing beside the Blackboard pointing RIGHT */}
-                <div className="shrink-0 self-center sm:self-start lg:self-center -mb-4 sm:mb-0 z-10">
+              <div className="lg:col-span-7 flex flex-col sm:flex-row items-center sm:items-end gap-4 relative pt-4 lg:pt-0">
+                {/* Teacher Avatar standing beside the Blackboard shifted DOWNWARDS */}
+                <div className="shrink-0 self-center sm:self-end z-10 translate-y-4 sm:translate-y-6 lg:translate-y-8">
                   <img
                     src="/avatars/explaining.png"
                     alt="Ameya Explaining Sticker"
-                    className="w-36 sm:w-44 lg:w-48 xl:w-52 h-auto object-contain drop-shadow-[0_25px_40px_rgba(0,0,0,0.9)] filter -rotate-2 hover:rotate-0 hover:scale-105 transition-all duration-300 pointer-events-none select-none"
+                    className="w-44 sm:w-56 md:w-60 lg:w-64 xl:w-72 h-auto object-contain drop-shadow-[0_30px_50px_rgba(0,0,0,0.95)] filter -rotate-2 hover:rotate-0 hover:scale-105 transition-all duration-300 pointer-events-none select-none"
                   />
                 </div>
 
-                {/* Dashboard Blackboard Card */}
-                <div className="flex-1 w-full border border-zinc-800/80 rounded-xl bg-zinc-950 p-5 sm:p-6 space-y-5 font-mono text-xs relative overflow-hidden shadow-2xl">
-                  <div className="flex justify-between items-center pb-3 border-b border-zinc-900 text-zinc-500 text-[10px] tracking-widest">
-                  <div className="flex space-x-2">
-                    <button
-                      onClick={() => setPreviewTab('metrics')}
-                      className={`px-2 py-0.5 rounded transition-colors ${
-                        previewTab === 'metrics' ? 'bg-white text-black font-bold' : 'text-zinc-500 hover:text-zinc-300'
-                      }`}
-                    >
-                      METRICS
-                    </button>
-                    <button
-                      onClick={() => setPreviewTab('code')}
-                      className={`px-2 py-0.5 rounded transition-colors ${
-                        previewTab === 'code' ? 'bg-white text-black font-bold' : 'text-zinc-500 hover:text-zinc-300'
-                      }`}
-                    >
-                      CODE CORE
-                    </button>
+                {/* Dashboard Blackboard Card enlarged & shifted UPWARDS */}
+                <div className="flex-1 w-full border border-zinc-800/80 rounded-xl bg-zinc-950 p-6 sm:p-8 space-y-6 font-mono text-xs sm:text-sm relative overflow-hidden shadow-2xl -translate-y-2 sm:-translate-y-4 lg:-translate-y-6">
+                  <div className="flex justify-between items-center pb-4 border-b border-zinc-900 text-zinc-400 text-[11px] sm:text-xs tracking-widest">
+                    <div className="flex space-x-2">
+                      <button
+                        onClick={() => setPreviewTab('metrics')}
+                        className={`px-3 py-1 rounded transition-colors ${
+                          previewTab === 'metrics' ? 'bg-white text-black font-bold' : 'text-zinc-500 hover:text-zinc-300'
+                        }`}
+                      >
+                        METRICS
+                      </button>
+                      <button
+                        onClick={() => setPreviewTab('code')}
+                        className={`px-3 py-1 rounded transition-colors ${
+                          previewTab === 'code' ? 'bg-white text-black font-bold' : 'text-zinc-500 hover:text-zinc-300'
+                        }`}
+                      >
+                        CODE CORE
+                      </button>
+                    </div>
+                    <span>LATENCY: &lt; 30MS</span>
                   </div>
-                  <span>LATENCY: &lt; 30MS</span>
+
+                  {previewTab === 'metrics' ? (
+                    <div className="space-y-4">
+                      <div className="flex justify-between text-zinc-300 font-medium">
+                        <span>MONTHLY INCOME</span>
+                        <span className="text-white font-bold text-sm sm:text-base">$5,400.00</span>
+                      </div>
+                      <div className="w-full bg-zinc-900 h-2 rounded-full overflow-hidden">
+                        <div className="bg-zinc-300 h-full w-[85%]" />
+                      </div>
+
+                      <div className="flex justify-between text-zinc-300 font-medium">
+                        <span>FIXED COMMITMENTS (KNAPSACK)</span>
+                        <span className="text-zinc-200 font-bold text-sm sm:text-base">$2,100.00</span>
+                      </div>
+                      <div className="w-full bg-zinc-900 h-2 rounded-full overflow-hidden">
+                        <div className="bg-emerald-500 h-full w-[38%]" />
+                      </div>
+
+                      <div className="flex justify-between text-zinc-300 font-medium">
+                        <span>GREEDY SURPLUS ALLOCATION</span>
+                        <span className="text-white font-bold text-sm sm:text-base">$1,850.00</span>
+                      </div>
+                      <div className="w-full bg-zinc-900 h-2 rounded-full overflow-hidden">
+                        <div className="bg-white h-full w-[65%]" />
+                      </div>
+
+                      <div className="pt-4 border-t border-zinc-900 text-xs space-y-1.5 text-zinc-400 font-sans">
+                        <p><span className="text-emerald-400 font-mono">✓</span> PriorityQueue.sort(essential_weights)</p>
+                        <p><span className="text-emerald-400 font-mono">✓</span> Knapsack.optimize(capacity, surplus)</p>
+                        <p className="text-zinc-300 font-mono">→ Investment yield target: +14.2% annualized</p>
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="overflow-x-auto p-4 bg-[#050507] rounded-lg border border-zinc-900 text-xs text-zinc-300 font-mono leading-relaxed">
+                      <pre>{featured.codeSnippet}</pre>
+                    </div>
+                  )}
                 </div>
-
-                {previewTab === 'metrics' ? (
-                  <div className="space-y-3">
-                    <div className="flex justify-between text-zinc-400">
-                      <span>MONTHLY INCOME</span>
-                      <span className="text-white">$5,400.00</span>
-                    </div>
-                    <div className="w-full bg-zinc-900 h-1.5 rounded-full overflow-hidden">
-                      <div className="bg-zinc-400 h-full w-[85%]" />
-                    </div>
-
-                    <div className="flex justify-between text-zinc-400">
-                      <span>FIXED COMMITMENTS (KNAPSACK)</span>
-                      <span className="text-zinc-300">$2,100.00</span>
-                    </div>
-                    <div className="w-full bg-zinc-900 h-1.5 rounded-full overflow-hidden">
-                      <div className="bg-emerald-500 h-full w-[38%]" />
-                    </div>
-
-                    <div className="flex justify-between text-zinc-400">
-                      <span>GREEDY SURPLUS ALLOCATION</span>
-                      <span className="text-white font-semibold">$1,850.00</span>
-                    </div>
-                    <div className="w-full bg-zinc-900 h-1.5 rounded-full overflow-hidden">
-                      <div className="bg-white h-full w-[65%]" />
-                    </div>
-
-                    <div className="pt-3 border-t border-zinc-900 text-[11px] space-y-1 text-zinc-500">
-                      <p><span className="text-emerald-400">✓</span> PriorityQueue.sort(essential_weights)</p>
-                      <p><span className="text-emerald-400">✓</span> Knapsack.optimize(capacity, surplus)</p>
-                      <p className="text-zinc-400">→ Investment yield target: +14.2% annualized</p>
-                    </div>
-                  </div>
-                ) : (
-                  <div className="overflow-x-auto p-3 bg-[#050507] rounded border border-zinc-900 text-[11px] text-zinc-300 font-mono leading-relaxed">
-                    <pre>{featured.codeSnippet}</pre>
-                  </div>
-                )}
-              </div>
             </div>
           </div>
         </TiltCard>
