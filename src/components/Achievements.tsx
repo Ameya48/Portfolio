@@ -139,13 +139,10 @@ export default function Achievements() {
             </div>
             <LiveAvatar
               src="/avatars/learning.png"
+              blinkSrc="/avatars/learning_blink.png"
               alt="Ameya Learning Sticker"
-              animation="reading"
-              enableBlink={true}
               blinkInterval={5}
-              leftEye={{ top: '14%', left: '44%', width: '9%', height: '4%' }}
-              rightEye={{ top: '14%', left: '57%', width: '8%', height: '4%' }}
-              imgClassName="w-32 sm:w-44 lg:w-52 h-auto object-contain drop-shadow-[0_20px_35px_rgba(0,0,0,0.85)] filter scale-x-[-1] rotate-2 hover:rotate-0 hover:scale-105 transition-transform duration-300 pointer-events-none select-none shrink-0"
+              imgClassName="w-32 sm:w-44 lg:w-52 h-auto object-contain drop-shadow-[0_20px_35px_rgba(0,0,0,0.85)] filter scale-x-[-1] rotate-2 pointer-events-none select-none shrink-0 -translate-x-4 sm:-translate-x-6 lg:-translate-x-10"
             />
           </div>
 

@@ -110,14 +110,11 @@ export default function Skills() {
           <div className="shrink-0 self-center pt-4 md:pt-0 -translate-x-4 sm:-translate-x-6 lg:-translate-x-10">
             <LiveAvatar
               src="/avatars/coding.png"
+              blinkSrc="/avatars/coding_blink.png"
               alt="Ameya Coding Sticker"
-              animation="typing"
-              enableBlink={true}
               blinkInterval={4}
               mirrored={true}
-              leftEye={{ top: '12%', left: '50%', width: '9%', height: '4%' }}
-              rightEye={{ top: '12%', left: '63%', width: '8%', height: '4%' }}
-              imgClassName="w-36 sm:w-48 lg:w-56 h-auto object-contain drop-shadow-[0_20px_35px_rgba(0,0,0,0.9)] filter -rotate-3 hover:rotate-0 hover:scale-105 transition-transform duration-300 pointer-events-none select-none"
+              imgClassName="w-36 sm:w-48 lg:w-56 h-auto object-contain drop-shadow-[0_20px_35px_rgba(0,0,0,0.9)] filter -rotate-3 pointer-events-none select-none"
             />
           </div>
         </div>

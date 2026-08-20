@@ -157,13 +157,10 @@ export default function Projects() {
                 <div className="shrink-0 self-center sm:self-end z-20 translate-y-4 sm:translate-y-6 lg:translate-y-8 -mr-6 sm:-mr-10 lg:-mr-14 relative flex flex-col items-center">
                   <LiveAvatar
                     src="/avatars/explaining.png"
+                    blinkSrc="/avatars/explaining_blink.png"
                     alt="Ameya Explaining Sticker"
-                    animation="gesturing"
-                    enableBlink={true}
                     blinkInterval={3}
-                    leftEye={{ top: '7%', left: '36%', width: '8%', height: '3.5%' }}
-                    rightEye={{ top: '7%', left: '50%', width: '8%', height: '3.5%' }}
-                    imgClassName="w-48 sm:w-60 md:w-64 lg:w-72 xl:w-80 h-auto object-contain drop-shadow-[0_30px_50px_rgba(0,0,0,0.95)] filter -rotate-2 hover:rotate-0 hover:scale-105 transition-transform duration-300 pointer-events-none select-none relative z-10"
+                    imgClassName="w-48 sm:w-60 md:w-64 lg:w-72 xl:w-80 h-auto object-contain drop-shadow-[0_30px_50px_rgba(0,0,0,0.95)] filter -rotate-2 pointer-events-none select-none relative z-10"
                   />
                   {/* Circular Disc / Standing Platform */}
                   <div

@@ -95,14 +95,11 @@ export default function About() {
           >
             <LiveAvatar
               src="/avatars/thinking.png"
+              blinkSrc="/avatars/thinking_blink.png"
               alt="Ameya Thinking Sticker"
-              animation="breathing"
-              enableBlink={true}
               blinkInterval={4}
               mirrored={true}
-              leftEye={{ top: '16%', left: '40%', width: '9%', height: '4%' }}
-              rightEye={{ top: '16%', left: '54%', width: '9%', height: '4%' }}
-              imgClassName="w-52 sm:w-64 lg:w-72 h-auto object-contain drop-shadow-[0_20px_35px_rgba(0,0,0,0.85)] filter -rotate-2 hover:rotate-1 hover:scale-105 transition-transform duration-300 pointer-events-none select-none shrink-0"
+              imgClassName="w-52 sm:w-64 lg:w-72 h-auto object-contain drop-shadow-[0_20px_35px_rgba(0,0,0,0.85)] filter -rotate-2 pointer-events-none select-none shrink-0"
             />
           </motion.div>
         </div>
