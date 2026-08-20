@@ -68,65 +68,51 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* =====================================================
-   LIVE AVATAR ANIMATIONS
+   LIVE AVATAR ANIMATIONS — subtle, no shaking
    ===================================================== */
 
-/* Generic idle breathing – subtle float + scale */
+/* Gentle float: used for all avatars as the base alive-feeling */
 @keyframes avatar-breathe {
-  0%, 100% { transform: translateY(0px) scale(1); }
-  45%       { transform: translateY(-7px) scale(1.015); }
-  55%       { transform: translateY(-7px) scale(1.015); }
+  0%, 100% { transform: translateY(0px);  }
+  50%       { transform: translateY(-6px); }
 }
 
-/* Typing – fast wrist-bob as if tap-tap-tapping keys */
+/* Typing: barely perceptible slow sway — no fast bounce */
 @keyframes avatar-type {
-  0%,100% { transform: translateY(0px)   rotate(0deg);   }
-  15%     { transform: translateY(-4px)  rotate(-0.5deg); }
-  30%     { transform: translateY(0px)   rotate(0deg);   }
-  45%     { transform: translateY(-3px)  rotate(0.4deg);  }
-  60%     { transform: translateY(0px)   rotate(0deg);   }
-  75%     { transform: translateY(-5px)  rotate(-0.3deg); }
+  0%, 100% { transform: translateY(0px);  }
+  50%       { transform: translateY(-4px); }
 }
 
-/* Sipping coffee – tilt up towards cup, pause, return */
+/* Sipping: one smooth tilt-up, hold, return — purely on translateY */
 @keyframes avatar-sip {
-  0%,  30% { transform: translateY(0px)  rotate(0deg);   }
-  38%      { transform: translateY(-6px) rotate(2.5deg); }
-  52%      { transform: translateY(-6px) rotate(2.5deg); } /* pause at lips */
-  62%      { transform: translateY(-2px) rotate(1deg);  }
-  70%,100% { transform: translateY(0px)  rotate(0deg);   }
+  0%,  20% { transform: translateY(0px);  }
+  35%       { transform: translateY(-8px); }
+  55%       { transform: translateY(-8px); } /* hold at sip */
+  75%       { transform: translateY(-3px); }
+  90%, 100% { transform: translateY(0px);  }
 }
 
-/* Gesturing / explaining – gentle sway while pointing */
+/* Gesturing: very slow gentle float */
 @keyframes avatar-gesture {
-  0%,100% { transform: translateY(0px)  rotate(0deg);    }
-  25%     { transform: translateY(-5px) rotate(-1deg);   }
-  50%     { transform: translateY(-3px) rotate(0.8deg);  }
-  75%     { transform: translateY(-6px) rotate(-0.5deg); }
+  0%, 100% { transform: translateY(0px);  }
+  50%       { transform: translateY(-5px); }
 }
 
-/* Reading – gentle forward lean / page-turn rock */
+/* Reading: slow gentle float */
 @keyframes avatar-read {
-  0%,100% { transform: translateY(0px)  rotate(0deg);   }
-  30%     { transform: translateY(-4px) rotate(-0.8deg); }
-  60%     { transform: translateY(-2px) rotate(0.5deg);  }
+  0%, 100% { transform: translateY(0px);  }
+  50%       { transform: translateY(-5px); }
 }
 
-/* Ground shadow breathes in sync with the avatar */
+/* Ground shadow breathes in sync */
 @keyframes avatar-shadow-breathe {
-  0%,100% { opacity: 0.6; transform: scaleX(1);    }
-  50%     { opacity: 0.3; transform: scaleX(0.82); }
+  0%, 100% { opacity: 0.6; transform: scaleX(1);    }
+  50%       { opacity: 0.3; transform: scaleX(0.85); }
 }
 
-/* Laptop screen glow pulse (used in Hero typing overlay) */
+/* Laptop screen glow pulse */
 @keyframes screen-pulse {
-  0%,100% { opacity: 0.85; }
-  50%     { opacity: 1;    }
-}
-
-/* Typing cursor blink */
-@keyframes cursor-blink {
-  0%,49% { opacity: 1; }
-  50%,100% { opacity: 0; }
+  0%, 100% { opacity: 0.7; }
+  50%       { opacity: 1;   }
 }
 

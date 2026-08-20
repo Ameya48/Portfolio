@@ -87,11 +87,11 @@ export default function LiveAvatar({
 
   /* ---- pick CSS animation name ---- */
   const defaultDurations: Record<AnimationType, number> = {
-    breathing: 3.5,
-    typing:    0.7,
-    sipping:   6,
-    gesturing: 4,
-    reading:   5,
+    breathing: 4,
+    typing:    5,    // slow float — not a fast shake
+    sipping:   6,    // overridden to 4s in Contact via animationDuration prop
+    gesturing: 5,
+    reading:   6,
   };
   const duration = animationDuration ?? defaultDurations[animation];
   const animationCSS: React.CSSProperties = {
@@ -122,19 +122,15 @@ export default function LiveAvatar({
 
   return (
     <div className={`relative inline-flex flex-col items-center ${wrapperClassName}`}>
-      {/* animated inner wrapper (mirror goes here so overlays stay aligned) */}
-      <div
-        className="relative"
-        style={{
-          ...animationCSS,
-          transform: mirrored ? 'scaleX(-1)' : undefined,
-        }}
-      >
-        <img src={src} alt={alt} className={imgClassName} />
-
-        {/* eye overlays */}
-        {enableBlink && leftEye && <EyeLid pos={leftEye} />}
-        {enableBlink && rightEye && <EyeLid pos={rightEye} />}
+      {/* mirror wrapper — only sets scaleX, never touched by CSS animation */}
+      <div style={{ transform: mirrored ? 'scaleX(-1)' : undefined }}>
+        {/* animation wrapper — drives the float/sip/etc on its own transform */}
+        <div className="relative" style={animationCSS}>
+          <img src={src} alt={alt} className={imgClassName} />
+          {/* eye overlays */}
+          {enableBlink && leftEye && <EyeLid pos={leftEye} />}
+          {enableBlink && rightEye && <EyeLid pos={rightEye} />}
+        </div>
       </div>
 
       {/* optional breathing ground shadow */}
