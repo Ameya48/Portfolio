@@ -127,38 +127,53 @@ export default function Achievements() {
           transition={{ duration: 0.8 }}
           className="pt-12 border-t border-zinc-900/80"
         >
-          <div className="mb-8 flex items-center justify-between gap-4">
+          <div className="mb-8 flex flex-col sm:flex-row items-start sm:items-end justify-between gap-6">
             <div>
               <span className="font-mono text-xs text-zinc-500 tracking-[0.2em] uppercase block mb-2">
                 ACTIVE GROWTH & RESEARCH
               </span>
-              <h3 className="text-2xl sm:text-3xl font-serif font-bold text-white uppercase">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-white uppercase tracking-tight">
                 CURRENTLY EXPLORING
               </h3>
             </div>
-            <img
-              src="/avatars/learning.png"
-              alt="Ameya Learning Sticker"
-              className="w-32 sm:w-44 lg:w-52 h-auto object-contain drop-shadow-[0_20px_35px_rgba(0,0,0,0.85)] filter scale-x-[-1] rotate-2 hover:rotate-0 hover:scale-105 transition-all duration-300 pointer-events-none select-none shrink-0 -translate-x-4 sm:-translate-x-6 lg:-translate-x-10"
-            />
+
+            {/* Avatar with Circular Base Disc Platform */}
+            <div className="shrink-0 flex flex-col items-center relative self-end sm:self-auto pr-4 sm:pr-8">
+              <img
+                src="/avatars/learning.png"
+                alt="Ameya Learning Sticker"
+                className="w-36 sm:w-44 lg:w-48 h-auto object-contain drop-shadow-[0_20px_35px_rgba(0,0,0,0.85)] filter scale-x-[-1] rotate-2 hover:rotate-0 hover:scale-105 transition-all duration-300 pointer-events-none select-none relative z-10"
+              />
+              {/* Circular Disc Platform */}
+              <div
+                className="-mt-3 w-28 sm:w-36 lg:w-40 h-4 sm:h-5 rounded-[50%] z-0"
+                style={{
+                  background: 'radial-gradient(ellipse at center, rgba(0,206,209,0.35) 0%, rgba(0,206,209,0.15) 40%, rgba(0,206,209,0.05) 70%, transparent 100%)',
+                  boxShadow: '0 0 25px 8px rgba(0,206,209,0.12)',
+                }}
+              />
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* Balanced 4-Column Grid for the 4 Focus Cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {PORTFOLIO_CONFIG.currentlyExploring.map((area, idx) => (
               <div
                 key={idx}
-                className="border border-zinc-900 bg-zinc-950/40 p-6 rounded-xl hover:border-zinc-800 transition-colors"
+                className="border border-zinc-900 bg-zinc-950/60 p-5 sm:p-6 rounded-xl hover:border-zinc-800 transition-all duration-300 flex flex-col justify-between"
               >
-                <div className="flex items-center space-x-2 font-mono text-xs text-zinc-500 uppercase mb-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
-                  <span>[ LEARNING FOCUS 0{idx + 1} ]</span>
+                <div>
+                  <div className="flex items-center space-x-2 font-mono text-[11px] text-zinc-500 uppercase mb-3">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                    <span>[ LEARNING FOCUS 0{idx + 1} ]</span>
+                  </div>
+                  <h4 className="text-base font-serif font-bold text-white mb-2 leading-snug">
+                    {area.title}
+                  </h4>
+                  <p className="text-xs text-zinc-400 font-light leading-relaxed">
+                    {area.description}
+                  </p>
                 </div>
-                <h4 className="text-base font-serif font-bold text-white mb-2">
-                  {area.title}
-                </h4>
-                <p className="text-xs text-zinc-400 font-light leading-relaxed">
-                  {area.description}
-                </p>
               </div>
             ))}
           </div>
