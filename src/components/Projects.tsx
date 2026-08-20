@@ -67,9 +67,9 @@ export default function Projects() {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
               {/* Left Narrative Column */}
-              <div className="lg:col-span-7 space-y-6">
+              <div className="lg:col-span-5 space-y-6">
                 <div>
                   <h3 className="text-2xl sm:text-4xl font-extrabold text-white font-serif tracking-tight mb-2">
                     {featured.title}
@@ -150,16 +150,19 @@ export default function Projects() {
                 </div>
               </div>
 
-              {/* Right Visual Dashboard Preview & Explaining Sticker */}
-              <div className="lg:col-span-5 flex flex-col space-y-6 items-center">
-                {/* Prominent Explaining Sticker flipped to gesture directly at the dashboard metrics */}
-                <img
-                  src="/avatars/explaining.png"
-                  alt="Ameya Explaining Sticker"
-                  className="w-40 sm:w-52 lg:w-60 h-auto object-contain drop-shadow-[0_20px_35px_rgba(0,0,0,0.85)] filter scale-x-[-1] rotate-3 hover:rotate-0 hover:scale-105 transition-all duration-300 pointer-events-none select-none"
-                />
+              {/* Right Visual Dashboard Preview & Explaining Avatar ("Teacher at Blackboard") */}
+              <div className="lg:col-span-7 flex flex-col sm:flex-row items-center gap-3 sm:gap-4 relative pt-4 lg:pt-0">
+                {/* Teacher Avatar standing beside the Blackboard pointing RIGHT */}
+                <div className="shrink-0 self-center sm:self-start lg:self-center -mb-4 sm:mb-0 z-10">
+                  <img
+                    src="/avatars/explaining.png"
+                    alt="Ameya Explaining Sticker"
+                    className="w-36 sm:w-44 lg:w-48 xl:w-52 h-auto object-contain drop-shadow-[0_25px_40px_rgba(0,0,0,0.9)] filter -rotate-2 hover:rotate-0 hover:scale-105 transition-all duration-300 pointer-events-none select-none"
+                  />
+                </div>
 
-                <div className="w-full border border-zinc-800/80 rounded-xl bg-zinc-950 p-6 space-y-5 font-mono text-xs relative overflow-hidden">
+                {/* Dashboard Blackboard Card */}
+                <div className="flex-1 w-full border border-zinc-800/80 rounded-xl bg-zinc-950 p-5 sm:p-6 space-y-5 font-mono text-xs relative overflow-hidden shadow-2xl">
                   <div className="flex justify-between items-center pb-3 border-b border-zinc-900 text-zinc-500 text-[10px] tracking-widest">
                   <div className="flex space-x-2">
                     <button
