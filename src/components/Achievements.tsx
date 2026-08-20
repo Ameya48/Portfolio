@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { PORTFOLIO_CONFIG } from '../config/portfolio'
+import LiveAvatar from './LiveAvatar'
 
 export default function Achievements() {
   const [activeCategory, setActiveCategory] = useState<string>('ALL')
@@ -136,10 +137,15 @@ export default function Achievements() {
                 CURRENTLY EXPLORING
               </h3>
             </div>
-            <img
+            <LiveAvatar
               src="/avatars/learning.png"
               alt="Ameya Learning Sticker"
-              className="w-32 sm:w-44 lg:w-52 h-auto object-contain drop-shadow-[0_20px_35px_rgba(0,0,0,0.85)] filter scale-x-[-1] rotate-2 hover:rotate-0 hover:scale-105 transition-all duration-300 pointer-events-none select-none shrink-0 -translate-x-4 sm:-translate-x-6 lg:-translate-x-10"
+              animation="reading"
+              enableBlink={true}
+              blinkInterval={5}
+              leftEye={{ top: '14%', left: '44%', width: '9%', height: '4%' }}
+              rightEye={{ top: '14%', left: '57%', width: '8%', height: '4%' }}
+              imgClassName="w-32 sm:w-44 lg:w-52 h-auto object-contain drop-shadow-[0_20px_35px_rgba(0,0,0,0.85)] filter scale-x-[-1] rotate-2 hover:rotate-0 hover:scale-105 transition-transform duration-300 pointer-events-none select-none shrink-0"
             />
           </div>
 

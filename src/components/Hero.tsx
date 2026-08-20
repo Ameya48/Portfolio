@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { PORTFOLIO_CONFIG } from '../config/portfolio'
+import LiveAvatar from './LiveAvatar'
 
 export default function Hero() {
   const containerVariants = {
@@ -172,13 +173,24 @@ export default function Hero() {
           </div>
 
           {/* Right Hero Avatar Sticker */}
-          <motion.div variants={itemVariants} className="lg:col-span-4 hidden lg:flex justify-end items-end pt-12 lg:translate-x-6 xl:translate-x-10 lg:translate-y-10 xl:translate-y-14">
-            <motion.img
-              animate={{ y: [0, -8, 0] }}
-              transition={{ repeat: Infinity, duration: 4, ease: 'easeInOut' }}
+          <motion.div variants={itemVariants} className="lg:col-span-4 hidden lg:flex justify-end items-end pt-12 lg:translate-x-6 xl:translate-x-10 lg:translate-y-10 xl:translate-y-14 relative">
+            <LiveAvatar
               src="/avatars/working.png"
               alt="Ameya Working Sticker"
-              className="w-56 md:w-64 lg:w-72 h-auto object-contain drop-shadow-[0_20px_35px_rgba(0,0,0,0.85)] filter -rotate-2 hover:rotate-1 hover:scale-105 transition-all duration-300 pointer-events-none select-none shrink-0"
+              animation="typing"
+              enableBlink={true}
+              blinkInterval={3.5}
+              leftEye={{ top: '17%', left: '48%', width: '8%', height: '4%' }}
+              rightEye={{ top: '17%', left: '62%', width: '8%', height: '4%' }}
+              imgClassName="w-56 md:w-64 lg:w-72 h-auto object-contain drop-shadow-[0_20px_35px_rgba(0,0,0,0.85)] filter -rotate-2 hover:rotate-1 hover:scale-105 transition-transform duration-300 pointer-events-none select-none shrink-0"
+            />
+            {/* Laptop screen glow pulse overlay */}
+            <div
+              className="absolute bottom-[38%] left-[12%] w-[28%] h-[14%] rounded pointer-events-none"
+              style={{
+                background: 'radial-gradient(ellipse at center, rgba(0,206,209,0.18) 0%, transparent 80%)',
+                animation: 'screen-pulse 2.5s ease-in-out infinite',
+              }}
             />
           </motion.div>
         </div>

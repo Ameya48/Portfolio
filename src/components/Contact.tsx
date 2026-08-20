@@ -2,6 +2,7 @@ import { useState } from 'react'
 import type { FormEvent } from 'react'
 import { motion } from 'framer-motion'
 import { PORTFOLIO_CONFIG } from '../config/portfolio'
+import LiveAvatar from './LiveAvatar'
 
 interface ContactProps {
   onOpenResume?: () => void
@@ -65,10 +66,14 @@ export default function Contact({ onOpenResume }: ContactProps) {
           </div>
 
           <div className="shrink-0 pt-4 md:pt-0 -translate-x-4 sm:-translate-x-6 lg:-translate-x-10">
-            <img
+            <LiveAvatar
               src="/avatars/coffee-break.png"
               alt="Ameya Coffee Break Sticker"
-              className="w-40 sm:w-52 lg:w-60 h-auto object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.9)] filter scale-x-[-1] rotate-3 hover:rotate-0 hover:scale-105 transition-all duration-300 pointer-events-none select-none"
+              animation="sipping"
+              enableBlink={false}
+              mirrored={true}
+              imgClassName="w-40 sm:w-52 lg:w-60 h-auto object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.9)] filter rotate-3 hover:rotate-0 hover:scale-105 transition-transform duration-300 pointer-events-none select-none"
+              animationDuration={4}
             />
           </div>
         </motion.div>

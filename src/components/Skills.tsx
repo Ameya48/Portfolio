@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { PORTFOLIO_CONFIG } from '../config/portfolio'
+import LiveAvatar from './LiveAvatar'
 
 export default function Skills() {
   const [activeCategory, setActiveCategory] = useState<string>('all')
@@ -107,10 +108,16 @@ export default function Skills() {
           </div>
 
           <div className="shrink-0 self-center pt-4 md:pt-0 -translate-x-4 sm:-translate-x-6 lg:-translate-x-10">
-            <img
+            <LiveAvatar
               src="/avatars/coding.png"
               alt="Ameya Coding Sticker"
-              className="w-36 sm:w-48 lg:w-56 h-auto object-contain drop-shadow-[0_20px_35px_rgba(0,0,0,0.9)] filter scale-x-[-1] -rotate-3 hover:rotate-0 hover:scale-105 transition-all duration-300 pointer-events-none select-none"
+              animation="typing"
+              enableBlink={true}
+              blinkInterval={4}
+              mirrored={true}
+              leftEye={{ top: '12%', left: '50%', width: '9%', height: '4%' }}
+              rightEye={{ top: '12%', left: '63%', width: '8%', height: '4%' }}
+              imgClassName="w-36 sm:w-48 lg:w-56 h-auto object-contain drop-shadow-[0_20px_35px_rgba(0,0,0,0.9)] filter -rotate-3 hover:rotate-0 hover:scale-105 transition-transform duration-300 pointer-events-none select-none"
             />
           </div>
         </div>
