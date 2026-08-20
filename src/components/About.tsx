@@ -60,12 +60,7 @@ export default function About() {
             <p className="text-lg sm:text-xl text-zinc-200 font-serif font-light leading-relaxed">
               I am a Computer Science & Engineering student driven by a deep fascination for software architecture, computational efficiency, and thoughtful user interface design.
             </p>
-            <p className="text-sm sm:text-base text-zinc-400 font-light leading-relaxed font-sans">
-              Rather than viewing code strictly as syntax, I treat software engineering as the art of building reliable, real-world systems. My work spans the full technology stack—from low-level algorithmic logic in C++ to cloud-native backends in Node.js and fluid, responsive interfaces in React.
-            </p>
-            <p className="text-sm sm:text-base text-zinc-400 font-light leading-relaxed font-sans">
-              I prioritize clean system design, maintainable codebase structures, and performance optimization. Whether designing RESTful microservices, containerizing environments with Docker, or tuning database queries, my objective remains constant: deliver robust engineering with zero unnecessary complexity.
-            </p>
+
 
             {/* Quick Stat Pill Highlights */}
             <div className="pt-4 grid grid-cols-2 sm:grid-cols-3 gap-4 font-mono text-xs">
