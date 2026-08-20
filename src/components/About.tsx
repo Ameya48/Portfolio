@@ -84,7 +84,7 @@ export default function About() {
             </div>
           </motion.div>
 
-          {/* Right Column: Thinking Sticker */}
+          {/* Right Column: Thinking Sticker flipped to gaze at content */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -97,7 +97,7 @@ export default function About() {
               transition={{ repeat: Infinity, duration: 4, ease: 'easeInOut' }}
               src="/avatars/thinking.png"
               alt="Ameya Thinking Sticker"
-              className="w-52 sm:w-64 lg:w-72 h-auto object-contain drop-shadow-[0_20px_35px_rgba(0,0,0,0.85)] filter -rotate-2 hover:rotate-1 hover:scale-105 transition-all duration-300 pointer-events-none select-none shrink-0"
+              className="w-52 sm:w-64 lg:w-72 h-auto object-contain drop-shadow-[0_20px_35px_rgba(0,0,0,0.85)] filter scale-x-[-1] -rotate-2 hover:rotate-1 hover:scale-105 transition-all duration-300 pointer-events-none select-none shrink-0"
             />
           </motion.div>
         </div>

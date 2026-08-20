@@ -68,7 +68,7 @@ export default function Contact({ onOpenResume }: ContactProps) {
             <img
               src="/avatars/coffee-break.png"
               alt="Ameya Coffee Break Sticker"
-              className="w-40 sm:w-52 lg:w-60 h-auto object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.9)] filter rotate-3 hover:rotate-0 hover:scale-105 transition-all duration-300 pointer-events-none select-none"
+              className="w-40 sm:w-52 lg:w-60 h-auto object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.9)] filter scale-x-[-1] rotate-3 hover:rotate-0 hover:scale-105 transition-all duration-300 pointer-events-none select-none"
             />
           </div>
         </motion.div>

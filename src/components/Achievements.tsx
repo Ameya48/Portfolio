@@ -39,7 +39,7 @@ export default function Achievements() {
             <img
               src="/avatars/achievement.png"
               alt="Ameya Achievement Sticker"
-              className="w-36 sm:w-48 lg:w-56 h-auto object-contain drop-shadow-[0_20px_35px_rgba(0,0,0,0.9)] filter -rotate-3 hover:rotate-0 hover:scale-105 transition-all duration-300 pointer-events-none select-none"
+              className="w-36 sm:w-48 lg:w-56 h-auto object-contain drop-shadow-[0_20px_35px_rgba(0,0,0,0.9)] filter scale-x-[-1] -rotate-3 hover:rotate-0 hover:scale-105 transition-all duration-300 pointer-events-none select-none"
             />
           </div>
         </motion.div>
@@ -139,7 +139,7 @@ export default function Achievements() {
             <img
               src="/avatars/learning.png"
               alt="Ameya Learning Sticker"
-              className="w-32 sm:w-44 lg:w-52 h-auto object-contain drop-shadow-[0_20px_35px_rgba(0,0,0,0.85)] filter rotate-2 hover:rotate-0 hover:scale-105 transition-all duration-300 pointer-events-none select-none shrink-0"
+              className="w-32 sm:w-44 lg:w-52 h-auto object-contain drop-shadow-[0_20px_35px_rgba(0,0,0,0.85)] filter scale-x-[-1] rotate-2 hover:rotate-0 hover:scale-105 transition-all duration-300 pointer-events-none select-none shrink-0"
             />
           </div>
 

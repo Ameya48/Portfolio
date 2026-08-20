@@ -110,7 +110,7 @@ export default function Skills() {
             <img
               src="/avatars/coding.png"
               alt="Ameya Coding Sticker"
-              className="w-36 sm:w-48 lg:w-56 h-auto object-contain drop-shadow-[0_20px_35px_rgba(0,0,0,0.9)] filter rotate-3 hover:rotate-0 hover:scale-105 transition-all duration-300 pointer-events-none select-none"
+              className="w-36 sm:w-48 lg:w-56 h-auto object-contain drop-shadow-[0_20px_35px_rgba(0,0,0,0.9)] filter scale-x-[-1] -rotate-3 hover:rotate-0 hover:scale-105 transition-all duration-300 pointer-events-none select-none"
             />
           </div>
         </div>
