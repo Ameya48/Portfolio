@@ -97,7 +97,8 @@ export default function About() {
               src="/avatars/thinking.png"
               blinkSrc="/avatars/thinking_blink.png"
               alt="Ameya Thinking Sticker"
-              blinkInterval={4}
+              blinkInterval={5.5}
+              blinkDuration={220}
               mirrored={true}
               imgClassName="w-52 sm:w-64 lg:w-72 h-auto object-contain drop-shadow-[0_20px_35px_rgba(0,0,0,0.85)] filter -rotate-2 pointer-events-none select-none shrink-0"
             />

@@ -159,7 +159,8 @@ export default function Projects() {
                     src="/avatars/explaining.png"
                     blinkSrc="/avatars/explaining_blink.png"
                     alt="Ameya Explaining Sticker"
-                    blinkInterval={3}
+                    blinkInterval={5.5}
+                    blinkDuration={220}
                     imgClassName="w-48 sm:w-60 md:w-64 lg:w-72 xl:w-80 h-auto object-contain drop-shadow-[0_30px_50px_rgba(0,0,0,0.95)] filter -rotate-2 pointer-events-none select-none relative z-10"
                   />
                   {/* Circular Disc / Standing Platform */}

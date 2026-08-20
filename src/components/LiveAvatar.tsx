@@ -1,45 +1,46 @@
 import { useEffect, useRef, useState } from 'react';
 
 /**
- * BlinkAvatar
- * -----------
- * Swaps between a normal PNG and a closed-eye PNG at random intervals
- * to simulate natural blinking. Zero CSS animation, zero overlays.
- * No floating, no transforms — just two images toggled in-place.
+ * LiveAvatar
+ * ----------
+ * Smoothly blends between open-eye and closed-eye PNG frames in-place.
+ * Stacked layers ensure zero image flicker, zero white background gaps,
+ * and zero layout shifts.
  */
 
-interface BlinkAvatarProps {
+interface LiveAvatarProps {
   /** Path to the normal (eyes open) image */
   src: string;
-  /** Path to the blink (eyes closed) image — must be same dimensions/pose */
+  /** Path to the blink (eyes closed) image */
   blinkSrc: string;
   alt: string;
-  /** Classes on the <img> element */
+  /** Classes on the <img> elements */
   imgClassName?: string;
-  /** Average seconds between blinks — randomised ±1s */
+  /** Average seconds between blinks — randomised (default ~5.5s) */
   blinkInterval?: number;
-  /** Duration of the blink in ms (how long eyes stay closed) */
+  /** Duration of the blink in ms (default 220ms for natural human blink) */
   blinkDuration?: number;
   /** Mirror the avatar horizontally */
   mirrored?: boolean;
 }
 
-export default function BlinkAvatar({
+export default function LiveAvatar({
   src,
   blinkSrc,
   alt,
   imgClassName = '',
-  blinkInterval = 3.5,
-  blinkDuration = 130,
+  blinkInterval = 5.5,
+  blinkDuration = 220,
   mirrored = false,
-}: BlinkAvatarProps) {
+}: LiveAvatarProps) {
   const [isBlinking, setIsBlinking] = useState(false);
-  const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
     const scheduleNext = () => {
-      const delay = (blinkInterval + (Math.random() * 2 - 1)) * 1000;
-      timer.current = setTimeout(() => {
+      // Natural human blink timing (approx 4.0s - 7.0s)
+      const delay = (blinkInterval + (Math.random() * 3 - 1.5)) * 1000;
+      timerRef.current = setTimeout(() => {
         setIsBlinking(true);
         setTimeout(() => {
           setIsBlinking(false);
@@ -48,15 +49,27 @@ export default function BlinkAvatar({
       }, delay);
     };
     scheduleNext();
-    return () => { if (timer.current) clearTimeout(timer.current); };
+    return () => { if (timerRef.current) clearTimeout(timerRef.current); };
   }, [blinkInterval, blinkDuration]);
 
   return (
-    <div style={mirrored ? { display: 'inline-block', transform: 'scaleX(-1)' } : undefined}>
+    <div
+      className="relative inline-block"
+      style={mirrored ? { transform: 'scaleX(-1)' } : undefined}
+    >
+      {/* Base Open-Eye Image */}
       <img
-        src={isBlinking ? blinkSrc : src}
+        src={src}
         alt={alt}
         className={imgClassName}
+      />
+
+      {/* Stacked Closed-Eye Blink Layer */}
+      <img
+        src={blinkSrc}
+        alt={`${alt} blink`}
+        className={`${imgClassName} absolute inset-0 pointer-events-none transition-opacity duration-75 ease-in-out`}
+        style={{ opacity: isBlinking ? 1 : 0 }}
       />
     </div>
   );

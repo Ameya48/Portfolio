@@ -112,7 +112,8 @@ export default function Skills() {
               src="/avatars/coding.png"
               blinkSrc="/avatars/coding_blink.png"
               alt="Ameya Coding Sticker"
-              blinkInterval={4}
+              blinkInterval={5.5}
+              blinkDuration={220}
               mirrored={true}
               imgClassName="w-36 sm:w-48 lg:w-56 h-auto object-contain drop-shadow-[0_20px_35px_rgba(0,0,0,0.9)] filter -rotate-3 pointer-events-none select-none"
             />
