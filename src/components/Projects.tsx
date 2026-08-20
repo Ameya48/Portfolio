@@ -151,13 +151,21 @@ export default function Projects() {
               </div>
 
               {/* Right Visual Dashboard Preview & Explaining Avatar ("Teacher at Blackboard") */}
-              <div className="lg:col-span-7 flex flex-col sm:flex-row items-center sm:items-end gap-0 sm:gap-1 relative pt-4 lg:pt-0">
-                {/* Teacher Avatar standing right beside the Blackboard */}
-                <div className="shrink-0 self-center sm:self-end z-20 translate-y-4 sm:translate-y-6 lg:translate-y-8 -mr-2 sm:-mr-4 lg:-mr-6">
+              <div className="lg:col-span-7 flex flex-col sm:flex-row items-center sm:items-end gap-0 relative pt-4 lg:pt-0">
+                {/* Teacher Avatar standing right beside the Blackboard with circular disc */}
+                <div className="shrink-0 self-center sm:self-end z-20 translate-y-4 sm:translate-y-6 lg:translate-y-8 -mr-6 sm:-mr-10 lg:-mr-14 relative flex flex-col items-center">
                   <img
                     src="/avatars/explaining.png"
                     alt="Ameya Explaining Sticker"
-                    className="w-44 sm:w-56 md:w-60 lg:w-64 xl:w-72 h-auto object-contain drop-shadow-[0_30px_50px_rgba(0,0,0,0.95)] filter -rotate-2 hover:rotate-0 hover:scale-105 transition-all duration-300 pointer-events-none select-none"
+                    className="w-48 sm:w-60 md:w-64 lg:w-72 xl:w-80 h-auto object-contain drop-shadow-[0_30px_50px_rgba(0,0,0,0.95)] filter -rotate-2 hover:rotate-0 hover:scale-105 transition-all duration-300 pointer-events-none select-none relative z-10"
+                  />
+                  {/* Circular Disc / Standing Platform */}
+                  <div
+                    className="-mt-4 sm:-mt-5 w-36 sm:w-44 md:w-48 lg:w-56 h-5 sm:h-6 rounded-[50%] z-0"
+                    style={{
+                      background: 'radial-gradient(ellipse at center, rgba(0,206,209,0.35) 0%, rgba(0,206,209,0.15) 40%, rgba(0,206,209,0.05) 70%, transparent 100%)',
+                      boxShadow: '0 0 30px 10px rgba(0,206,209,0.12)',
+                    }}
                   />
                 </div>
 
