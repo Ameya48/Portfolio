@@ -64,7 +64,7 @@ export default function Contact({ onOpenResume }: ContactProps) {
             </p>
           </div>
 
-          <div className="shrink-0 pt-4 md:pt-0">
+          <div className="shrink-0 pt-4 md:pt-0 -translate-x-4 sm:-translate-x-6 lg:-translate-x-10">
             <img
               src="/avatars/coffee-break.png"
               alt="Ameya Coffee Break Sticker"

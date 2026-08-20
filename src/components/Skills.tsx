@@ -106,7 +106,7 @@ export default function Skills() {
             </AnimatePresence>
           </div>
 
-          <div className="shrink-0 self-center pt-4 md:pt-0">
+          <div className="shrink-0 self-center pt-4 md:pt-0 -translate-x-4 sm:-translate-x-6 lg:-translate-x-10">
             <img
               src="/avatars/coding.png"
               alt="Ameya Coding Sticker"

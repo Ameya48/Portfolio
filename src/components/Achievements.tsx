@@ -35,7 +35,7 @@ export default function Achievements() {
             </h2>
           </div>
 
-          <div className="shrink-0 pt-4 md:pt-0">
+          <div className="shrink-0 pt-4 md:pt-0 -translate-x-4 sm:-translate-x-6 lg:-translate-x-10">
             <img
               src="/avatars/achievement.png"
               alt="Ameya Achievement Sticker"
@@ -139,7 +139,7 @@ export default function Achievements() {
             <img
               src="/avatars/learning.png"
               alt="Ameya Learning Sticker"
-              className="w-32 sm:w-44 lg:w-52 h-auto object-contain drop-shadow-[0_20px_35px_rgba(0,0,0,0.85)] filter scale-x-[-1] rotate-2 hover:rotate-0 hover:scale-105 transition-all duration-300 pointer-events-none select-none shrink-0"
+              className="w-32 sm:w-44 lg:w-52 h-auto object-contain drop-shadow-[0_20px_35px_rgba(0,0,0,0.85)] filter scale-x-[-1] rotate-2 hover:rotate-0 hover:scale-105 transition-all duration-300 pointer-events-none select-none shrink-0 -translate-x-4 sm:-translate-x-6 lg:-translate-x-10"
             />
           </div>
 
