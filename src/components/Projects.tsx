@@ -2,7 +2,6 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { PORTFOLIO_CONFIG } from '../config/portfolio'
 import TiltCard from './TiltCard'
-import LiveAvatar from './LiveAvatar'
 
 export default function Projects() {
   const [selectedCategory, setSelectedCategory] = useState<string>('ALL')
@@ -153,15 +152,12 @@ export default function Projects() {
 
               {/* Right Visual Dashboard Preview & Explaining Avatar ("Teacher at Blackboard") */}
               <div className="lg:col-span-7 flex flex-col sm:flex-row items-center sm:items-end gap-0 relative pt-4 lg:pt-0">
-                {/* Teacher Avatar standing right beside the Blackboard */}
+                {/* Teacher Avatar standing right beside the Blackboard with circular disc */}
                 <div className="shrink-0 self-center sm:self-end z-20 translate-y-4 sm:translate-y-6 lg:translate-y-8 -mr-6 sm:-mr-10 lg:-mr-14 relative flex flex-col items-center">
-                  <LiveAvatar
+                  <img
                     src="/avatars/explaining.png"
-                    blinkSrc="/avatars/explaining_blink.png"
                     alt="Ameya Explaining Sticker"
-                    blinkInterval={5.5}
-                    blinkDuration={220}
-                    imgClassName="w-48 sm:w-60 md:w-64 lg:w-72 xl:w-80 h-auto object-contain drop-shadow-[0_30px_50px_rgba(0,0,0,0.95)] filter -rotate-2 pointer-events-none select-none relative z-10"
+                    className="w-48 sm:w-60 md:w-64 lg:w-72 xl:w-80 h-auto object-contain drop-shadow-[0_30px_50px_rgba(0,0,0,0.95)] filter -rotate-2 hover:rotate-0 hover:scale-105 transition-all duration-300 pointer-events-none select-none relative z-10"
                   />
                   {/* Circular Disc / Standing Platform */}
                   <div

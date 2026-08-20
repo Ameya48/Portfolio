@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion'
 import { PORTFOLIO_CONFIG } from '../config/portfolio'
-import LiveAvatar from './LiveAvatar'
 
 export default function About() {
   const containerVariants = {
@@ -93,14 +92,12 @@ export default function About() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="lg:col-span-5 flex justify-center items-center py-4"
           >
-            <LiveAvatar
+            <motion.img
+              animate={{ y: [0, -6, 0] }}
+              transition={{ repeat: Infinity, duration: 4, ease: 'easeInOut' }}
               src="/avatars/thinking.png"
-              blinkSrc="/avatars/thinking_blink.png"
               alt="Ameya Thinking Sticker"
-              blinkInterval={5.5}
-              blinkDuration={220}
-              mirrored={true}
-              imgClassName="w-52 sm:w-64 lg:w-72 h-auto object-contain drop-shadow-[0_20px_35px_rgba(0,0,0,0.85)] filter -rotate-2 pointer-events-none select-none shrink-0"
+              className="w-52 sm:w-64 lg:w-72 h-auto object-contain drop-shadow-[0_20px_35px_rgba(0,0,0,0.85)] filter scale-x-[-1] -rotate-2 hover:rotate-1 hover:scale-105 transition-all duration-300 pointer-events-none select-none shrink-0"
             />
           </motion.div>
         </div>

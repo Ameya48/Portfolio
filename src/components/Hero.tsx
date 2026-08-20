@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion'
 import { PORTFOLIO_CONFIG } from '../config/portfolio'
-import LiveAvatar from './LiveAvatar'
 
 export default function Hero() {
   const containerVariants = {
@@ -173,14 +172,13 @@ export default function Hero() {
           </div>
 
           {/* Right Hero Avatar Sticker */}
-          <motion.div variants={itemVariants} className="lg:col-span-4 hidden lg:flex justify-end items-end pt-12 lg:translate-x-6 xl:translate-x-10 lg:translate-y-10 xl:translate-y-14 relative">
-            <LiveAvatar
+          <motion.div variants={itemVariants} className="lg:col-span-4 hidden lg:flex justify-end items-end pt-12 lg:translate-x-6 xl:translate-x-10 lg:translate-y-10 xl:translate-y-14">
+            <motion.img
+              animate={{ y: [0, -8, 0] }}
+              transition={{ repeat: Infinity, duration: 4, ease: 'easeInOut' }}
               src="/avatars/working.png"
-              blinkSrc="/avatars/working_blink.png"
               alt="Ameya Working Sticker"
-              blinkInterval={5.5}
-              blinkDuration={220}
-              imgClassName="w-56 md:w-64 lg:w-72 h-auto object-contain drop-shadow-[0_20px_35px_rgba(0,0,0,0.85)] filter -rotate-2 pointer-events-none select-none shrink-0"
+              className="w-56 md:w-64 lg:w-72 h-auto object-contain drop-shadow-[0_20px_35px_rgba(0,0,0,0.85)] filter -rotate-2 hover:rotate-1 hover:scale-105 transition-all duration-300 pointer-events-none select-none shrink-0"
             />
           </motion.div>
         </div>
