@@ -151,9 +151,9 @@ export default function Projects() {
               </div>
 
               {/* Right Visual Dashboard Preview & Explaining Avatar ("Teacher at Blackboard") */}
-              <div className="lg:col-span-7 flex flex-col sm:flex-row items-center sm:items-end gap-4 relative pt-4 lg:pt-0">
-                {/* Teacher Avatar standing beside the Blackboard shifted DOWNWARDS */}
-                <div className="shrink-0 self-center sm:self-end z-10 translate-y-4 sm:translate-y-6 lg:translate-y-8">
+              <div className="lg:col-span-7 flex flex-col sm:flex-row items-center sm:items-end gap-0 sm:gap-1 relative pt-4 lg:pt-0">
+                {/* Teacher Avatar standing right beside the Blackboard */}
+                <div className="shrink-0 self-center sm:self-end z-20 translate-y-4 sm:translate-y-6 lg:translate-y-8 -mr-2 sm:-mr-4 lg:-mr-6">
                   <img
                     src="/avatars/explaining.png"
                     alt="Ameya Explaining Sticker"
@@ -161,8 +161,8 @@ export default function Projects() {
                   />
                 </div>
 
-                {/* Dashboard Blackboard Card enlarged & shifted UPWARDS */}
-                <div className="flex-1 w-full border border-zinc-800/80 rounded-xl bg-zinc-950 p-6 sm:p-8 space-y-6 font-mono text-xs sm:text-sm relative overflow-hidden shadow-2xl -translate-y-2 sm:-translate-y-4 lg:-translate-y-6">
+                {/* Dashboard Blackboard Card enlarged & pulled closer */}
+                <div className="flex-1 w-full border border-zinc-800/80 rounded-xl bg-zinc-950 p-6 sm:p-8 space-y-6 font-mono text-xs sm:text-sm relative overflow-hidden shadow-2xl -translate-y-2 sm:-translate-y-4 lg:-translate-y-6 z-10">
                   <div className="flex justify-between items-center pb-4 border-b border-zinc-900 text-zinc-400 text-[11px] sm:text-xs tracking-widest">
                     <div className="flex space-x-2">
                       <button
