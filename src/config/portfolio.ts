@@ -166,49 +166,58 @@ export const PORTFOLIO_CONFIG = {
 
   // Flagship Featured Project Case Study
   featuredProject: {
-    id: "budget-optimization-engine",
-    title: "Budget Optimization Engine",
-    subtitle: "Personal Finance Platform with Algorithmic Fund Allocation",
-    problemStatement: "Individuals struggle to balance fixed monthly expenses with discretionary spending, leading to inefficient fund allocation and missed investment opportunities.",
-    solution: "A personal finance platform that analyzes user salary, fixed expenses, entertainment spending, and available savings using Greedy and 0/1 Knapsack optimization algorithms to recommend efficient fund allocations and personalized financial reports.",
-    technologies: ["MongoDB", "Firebase", "JavaScript", "DSA"],
-    algorithms: ["Greedy Optimization", "0/1 Knapsack Problem", "Dynamic Programming", "Priority Allocation"],
+    id: "fintrack-ai",
+    title: "FinTrack AI Ecosystem",
+    subtitle: "AI-Powered Personal & Enterprise Expense Intelligence Platform",
+    problemStatement: "Young professionals and employees struggle to track multi-channel daily UPI/card spends, automate corporate reimbursements, and maintain privacy when sharing financial telemetry.",
+    solution: "A full-stack financial ecosystem featuring a Flutter mobile app, Node.js REST API microservices, GCP Cloud DLP data masking for PII privacy, automated employer reimbursement claims, and AI-driven expense categorization.",
+    technologies: ["Flutter", "Dart", "Node.js", "Express.js", "MongoDB", "GCP Cloud DLP", "REST APIs"],
+    algorithms: ["GCP Cloud DLP Data Masking", "AI Spending Insights", "Reimbursement Sync Engine", "Automated Expense Categorization"],
     keyFeatures: [
-      "Real-time income ingestion & expense breakdown analysis",
-      "0/1 Knapsack algorithmic allocation for essential fixed expense optimization",
-      "Greedy strategy to maximize surplus directed to high-yield investment options",
-      "Personalized financial reports with investment suggestions & stock-market allocation options"
+      "Privacy-first GCP Cloud DLP masking for redacting financial PII before AI processing",
+      "Cross-platform Flutter mobile client for tracking daily UPI and card transactions",
+      "Automated employer reimbursement claim lifecycle with sync workflows",
+      "Modular Node.js/Express microservices backend with JWT security & MongoDB persistence"
     ],
-    codeSnippet: `// 0/1 Knapsack Optimization for Essential Budget Allocation
-function optimizeBudget(capacity, expenses) {
-  const n = expenses.length;
-  const dp = Array.from({ length: n + 1 }, () => Array(capacity + 1).fill(0));
-
-  for (let i = 1; i <= n; i++) {
-    const { cost, utility } = expenses[i - 1];
-    for (let w = 0; w <= capacity; w++) {
-      if (cost <= w) {
-        dp[i][w] = Math.max(dp[i - 1][w], dp[i - 1][w - cost] + utility);
-      } else {
-        dp[i][w] = dp[i - 1][w];
+    codeSnippet: `// GCP Cloud DLP Integration for Privacy-Preserving Expense Masking
+async function maskFinancialData(payload) {
+  const dlpClient = new GoogleCloudDLP.DlpServiceClient();
+  const [response] = await dlpClient.deidentifyContent({
+    parent: dlpClient.projectPath(process.env.GCP_PROJECT_ID),
+    deidentifyConfig: {
+      infoTypeTransformations: {
+        transformations: [
+          { infoTypes: [{ name: 'CREDIT_CARD_NUMBER' }, { name: 'INDIA_PAN_NUMBER' }],
+            primitiveTransformation: { replaceWithInfoTypeConfig: {} } }
+        ]
       }
-    }
-  }
-  return dp[n][capacity];
+    },
+    item: { value: JSON.stringify(payload) }
+  });
+  return JSON.parse(response.item.value);
 }`,
-    githubUrl: "https://github.com/Ameya48/Personal_BudgetOptimizationEngine",
+    githubUrl: "https://github.com/Fin-Track-AI/Frontend",
     demoUrl: null,
     caseStudyDetails: {
-      problem: "Traditional budgeting spreadsheets require manual calculations and fail to recommend mathematically optimal spending distributions based on spending priority and savings goals.",
-      approach: "Formulated budget optimization using constrained optimization. Expenses are prioritized by necessity. A hybrid Greedy and Knapsack algorithm satisfies fixed commitments, reduces non-essential spending, and channels surplus into tailored investment suggestions.",
-      implementation: "Built using JavaScript and Data Structures & Algorithms, integrated with MongoDB for user persistence and Firebase for real-time state management. Features include automated expense partitioning and stock-market investment options.",
-      challenges: "Handling cases where non-discretionary expenses approach total income without compromising optimization speed, ensuring algorithmic computation runs in under 30ms.",
-      outcome: "Successfully engineered a deterministic finance engine that computes optimal budget partitioning and personalized financial reports in real time."
+      problem: "Young digital-native professionals lose track of scattered daily micro-transactions, while manual corporate reimbursement pipelines introduce processing delays, lost receipts, and severe data privacy concerns when handling raw banking records.",
+      approach: "Architected an end-to-end multi-tiered platform (FinTrack AI) combining a reactive Flutter mobile application with a scalable Node.js microservice backend. Integrated Google Cloud DLP (Data Loss Prevention) to automatically redact sensitive PII before transaction data is routed to AI models for privacy-preserving spending analysis.",
+      implementation: "Built frontend in Flutter with Material Design & Google Fonts. Developed modular Express.js backend services with Mongoose/MongoDB persistence, custom auth middlewares, automated expense splitting algorithms, and employee-employer sync channels.",
+      challenges: "Ensuring zero-latency GCP Cloud DLP data masking without delaying transaction logging, and synchronizing claim statuses between mobile endpoints and employer administrative dashboards in real-time.",
+      outcome: "Engineered a robust, privacy-compliant financial platform offering automated reimbursement workflows, zero PII exposure, and real-time AI spending analytics."
     }
   },
 
   // Curated Projects List (including pinned GitHub repositories)
   curatedProjects: [
+    {
+      id: "budget-optimization-engine",
+      name: "Budget Optimization Engine",
+      category: "SYSTEMS",
+      description: "Personal finance platform that analyzes user income and fixed expenses using Greedy and 0/1 Knapsack optimization algorithms to recommend efficient fund allocations.",
+      technologies: ["MongoDB", "Firebase", "JavaScript", "DSA"],
+      githubUrl: "https://github.com/Ameya48/Personal_BudgetOptimizationEngine",
+      demoUrl: null
+    },
     {
       id: "loyalty-rewards-program",
       name: "Loyalty Rewards Program",

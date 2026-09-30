@@ -63,7 +63,7 @@ export default function Projects() {
                 </div>
               </div>
               <div className="font-mono text-xs text-zinc-500">
-                ALGORITHMIC OPTIMIZATION ENGINE
+                FINTRACK AI ECOSYSTEM
               </div>
             </div>
 
@@ -196,33 +196,33 @@ export default function Projects() {
                   {previewTab === 'metrics' ? (
                     <div className="space-y-4">
                       <div className="flex justify-between text-zinc-300 font-medium">
-                        <span>MONTHLY INCOME</span>
-                        <span className="text-white font-bold text-sm sm:text-base">$5,400.00</span>
+                        <span>DAILY SPENDS & REIMBURSEMENTS</span>
+                        <span className="text-white font-bold text-sm sm:text-base">₹42,850.00</span>
                       </div>
                       <div className="w-full bg-zinc-900 h-2 rounded-full overflow-hidden">
                         <div className="bg-zinc-300 h-full w-[85%]" />
                       </div>
 
                       <div className="flex justify-between text-zinc-300 font-medium">
-                        <span>FIXED COMMITMENTS (KNAPSACK)</span>
-                        <span className="text-zinc-200 font-bold text-sm sm:text-base">$2,100.00</span>
+                        <span>GCP CLOUD DLP PRIVACY MASKING</span>
+                        <span className="text-zinc-200 font-bold text-sm sm:text-base">100% REDACTED</span>
                       </div>
                       <div className="w-full bg-zinc-900 h-2 rounded-full overflow-hidden">
-                        <div className="bg-emerald-500 h-full w-[38%]" />
+                        <div className="bg-emerald-500 h-full w-[100%]" />
                       </div>
 
                       <div className="flex justify-between text-zinc-300 font-medium">
-                        <span>GREEDY SURPLUS ALLOCATION</span>
-                        <span className="text-white font-bold text-sm sm:text-base">$1,850.00</span>
+                        <span>REIMBURSEMENT CLAIM SYNC</span>
+                        <span className="text-white font-bold text-sm sm:text-base">AUTOMATED</span>
                       </div>
                       <div className="w-full bg-zinc-900 h-2 rounded-full overflow-hidden">
-                        <div className="bg-white h-full w-[65%]" />
+                        <div className="bg-white h-full w-[90%]" />
                       </div>
 
                       <div className="pt-4 border-t border-zinc-900 text-xs space-y-1.5 text-zinc-400 font-sans">
-                        <p><span className="text-emerald-400 font-mono">✓</span> PriorityQueue.sort(essential_weights)</p>
-                        <p><span className="text-emerald-400 font-mono">✓</span> Knapsack.optimize(capacity, surplus)</p>
-                        <p className="text-zinc-300 font-mono">→ Investment yield target: +14.2% annualized</p>
+                        <p><span className="text-emerald-400 font-mono">✓</span> GCP Cloud DLP (PAN & Card Redaction)</p>
+                        <p><span className="text-emerald-400 font-mono">✓</span> Flutter Mobile + Node.js Express REST API</p>
+                        <p className="text-zinc-300 font-mono">→ Employer Reimbursement Claim Lifecycle: Active</p>
                       </div>
                     </div>
                   ) : (
@@ -411,16 +411,16 @@ export default function Projects() {
 
                   <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 font-mono text-xs">
                     <div className="p-3 bg-zinc-950 rounded border border-zinc-900">
-                      <span className="text-zinc-500 block text-[10px]">CORE ALG</span>
-                      <span className="text-white">Knapsack & Greedy</span>
+                      <span className="text-zinc-500 block text-[10px]">PRIVACY ENGINE</span>
+                      <span className="text-white">GCP Cloud DLP</span>
                     </div>
                     <div className="p-3 bg-zinc-950 rounded border border-zinc-900">
                       <span className="text-zinc-500 block text-[10px]">DATABASE</span>
-                      <span className="text-white">MongoDB / Firebase</span>
+                      <span className="text-white">MongoDB</span>
                     </div>
                     <div className="p-3 bg-zinc-950 rounded border border-zinc-900">
                       <span className="text-zinc-500 block text-[10px]">FRONTEND</span>
-                      <span className="text-white">React & Tailwind</span>
+                      <span className="text-white">Flutter (Dart)</span>
                     </div>
                     <div className="p-3 bg-zinc-950 rounded border border-zinc-900">
                       <span className="text-zinc-500 block text-[10px]">BACKEND</span>
